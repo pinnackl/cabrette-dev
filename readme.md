@@ -8,12 +8,12 @@ https://trello.com/b/dZeJnmou/refonte-cabrette
 
 ##Spécifaction Technique :
 
-git clone git@github.com:pinnackl/cabrette-dev.git
-cd cabrette-dev
-composer install
-npm install
-npm install gulp
-composer install
-php artisan migrate
+git clone git@github.com:pinnackl/cabrette-dev.git <br>
+cd cabrette-dev <br>
+composer install <br>
+npm install <br>
+npm install gulp <br>
+composer install <br>
+php artisan migrate <br>
 
 
