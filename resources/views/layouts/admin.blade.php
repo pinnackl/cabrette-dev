@@ -6,24 +6,28 @@
 
 @section('base_content')
 
-    <nav class="navbar navbar-light bg-faded">
+    <nav class="navbar navbar-dark bg-inverse">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}"><b>Cabrette et Cabrettaires</b></a>
             <ul class="nav navbar-nav">
                 <li class="nav-item {{ Request::segments()[1] == 'users' ? 'active' : ''}}">
                     <a class="nav-link" href="{{ route('admin.users.index') }}">Utilisateurs</a>
                 </li>
+                <li class="nav-item {{ Request::segments()[1] == 'categories' ? 'active' : ''}}">
+                    <a class="nav-link" href="{{ route('admin.categories.index') }}">Catégories</a>
+                </li>
                 <li class="nav-item {{ Request::segments()[1] == 'posts' ? 'active' : ''}}">
                     <a class="nav-link" href="{{ route('admin.posts.index') }}">Posts</a>
                 </li>
-                <li class="nav-item {{ Request::segments()[1] == 'posts' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.posts.index') }}">Events</a>
+                <li class="nav-item {{ Request::segments()[1] == 'events' ? 'active' : ''}}">
+                    <a class="nav-link" href="{{ route('admin.events.index') }}">Events</a>
                 </li>
-                <li class="nav-item {{ Request::segments()[1] == 'posts' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.posts.index') }}">Administration</a>
-                </li>
-                <li class="nav-item {{ Request::segments()[1] == 'posts' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.posts.index') }}">Média</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administration</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Média</a>
+                        <a class="dropdown-item" href="#">Forum</a>
+                    </div>
                 </li>
             </ul>
             <ul class="nav navbar-nav pull-right">

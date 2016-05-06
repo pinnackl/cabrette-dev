@@ -2,9 +2,6 @@
 
 $grey-light: #f4f4f4;
 
-.navbar {
-    background-color: $grey-light;
-}
 
 .admin-container {
     padding-top: 15px;
@@ -78,7 +75,7 @@ $grey-light: #f4f4f4;
         .action-cell {
             padding: 7px 14px;
             text-align: right;
-        
+
             .btn-sm {
                 padding: 0px 5px;
                 margin-left: 7px;

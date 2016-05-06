@@ -121,7 +121,8 @@ return [
         'first_name' => 'Prénom',
         'last_name' => 'Nom',
         'phone' => 'Numéro tel',
-        'role' => 'Rôle'
+        'role' => 'Rôle',
+        'date_start' => 'Date de début'
      ],
 
 ];
