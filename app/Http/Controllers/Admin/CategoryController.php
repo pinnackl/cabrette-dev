@@ -14,4 +14,47 @@ class CategoryController extends BaseController
 
         return view('admin.category.index', compact('categories'));
     }
+
+    public function create()
+    {
+        $category = new Category;
+
+        return view('admin.category.edit', compact('category'));
+    }
+
+    public function store()
+    {
+        $category = new Category(Input::all());
+        $category->save();
+
+        return redirect(route('admin.categories.index'));
+    }
+
+    public function edit($id)
+    {
+        $category = Category::findOrFail($id);
+
+        return view('admin.category.edit', compact('category'));
+    }
+
+    public function update($id)
+    {
+        $category = Category::findOrFail($id);
+
+        $category->fill(Input::all());
+
+        $category->save();
+
+        return back()->with('info', 'Modifications bien enregistrées.');
+    }
+
+    public function destroy($id)
+    {
+        $category = Category::findOrFail($id);
+        $category->delete();
+
+        return redirect(route('admin.categories.index'));
+    }
+
+
 }
