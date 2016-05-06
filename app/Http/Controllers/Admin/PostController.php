@@ -21,7 +21,7 @@ class PostController extends BaseController
         $post = new Post;
         $types = ['pub' => 'pub' , 'clip' => 'clip', 'exp' => 'experimental', 'habillage' => 'habillage'];
 
-        return view('admin.post.create', compact('post', 'types'));
+        return view('admin.post.edit', compact('post', 'types'));
     }
 
     public function store()
@@ -31,23 +31,10 @@ class PostController extends BaseController
 
         if(Input::file()) {
 
-            if (Input::file('video')) {
-                $videoFile = Input::file('video');
-                UploadFileHelper::moveToDestinationAndSaveInModel($videoFile, $post, 'video_filename');
-            }
             if (Input::file('cover')) {
                 $imgCoverFile = Input::file('cover');
                 UploadFileHelper::moveToDestinationAndSaveInModelCover($imgCoverFile, $post, 'cover_filename');
             }
-        }
-
-        if(Input::get('first_video')) {
-            $oldfirstvideo = Post::where('first_video', true)->first();
-            if($oldfirstvideo) {
-                $oldfirstvideo->first_video = false;
-                $oldfirstvideo->save();
-            }
-            $post->first_video = true;
         }
 
         $post->save();
@@ -69,25 +56,8 @@ class PostController extends BaseController
         $post = Post::findOrFail($id);
 
         $post->fill(Input::all());
-
-        if(Input::get('first_video')) {
-            $oldfirstvideo = Post::where('first_video', true)->first();
-            if($oldfirstvideo) {
-                $oldfirstvideo->first_video = false;
-                $oldfirstvideo->save();
-            }
-            $post->first_video = true;
-        }
-
-
+        
         if(Input::file()) {
-            if(!$post->video_filename) {
-                if (Input::file('video')) {
-                    $videoFile = Input::file('video');
-                    UploadFileHelper::moveToDestinationAndSaveInModel($videoFile, $post, 'video_filename');
-                }
-            }
-
             if (Input::file('cover')) {
                 $imgCoverFile = Input::file('cover');
                 UploadFileHelper::moveToDestinationAndSaveInModelCover($imgCoverFile, $post, 'cover_filename');
