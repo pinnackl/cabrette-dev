@@ -10,6 +10,8 @@ https://trello.com/b/dZeJnmou/refonte-cabrette
 
 Laravel 5 + MongoDB
 
+### Installation projet
+
 git clone git@github.com:pinnackl/cabrette-dev.git <br>
 cd cabrette-dev <br>
 composer install <br>
