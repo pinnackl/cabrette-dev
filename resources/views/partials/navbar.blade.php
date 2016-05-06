@@ -5,6 +5,11 @@
 
 <nav class="navbar navbar-light bg-faded">
     <ul class="nav navbar-nav">
+        @if(Auth::user())
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Bonjour {{ Auth::user()->full_name }} </a>
+            </li>
+        @endif
         <li class="nav-item active">
             <a class="nav-link" href="#">Actualités <span class="sr-only">(current)</span></a>
         </li>
