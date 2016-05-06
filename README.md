@@ -8,6 +8,8 @@ https://trello.com/b/dZeJnmou/refonte-cabrette
 
 ##Spécifaction Technique :
 
+Laravel 5 + MongoDB
+
 git clone git@github.com:pinnackl/cabrette-dev.git <br>
 cd cabrette-dev <br>
 composer install <br>

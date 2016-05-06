@@ -12,7 +12,10 @@
 */
 
 Route::get('admin', ['as' => 'login.index', 'uses' => 'LoginController@index']);
+Route::get('login', ['as' => 'login', 'uses' => 'LoginUserController@index']);
+Route::get('signup', ['as' => 'signup.index', 'uses' => 'LoginUserController@signup']);
 Route::post('admin', ['as' => 'login.store', 'uses' => 'LoginController@store']);
+
 Route::get('logout', ['as' => 'login.destroy', 'uses' => 'LoginController@destroy']);
 
 Route::get('/', ['as' => '/', 'uses' => 'HomeController@index']);

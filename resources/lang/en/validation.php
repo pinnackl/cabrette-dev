@@ -107,6 +107,7 @@ return [
     'attributes' => [
         'email' => 'Email',
         'password' => 'Mot de passe',
+        'confirm_password' => 'Confirmation mdp',
         'title' => 'Titre',
         'content' => 'Contenu',
         'type' => 'Type',
