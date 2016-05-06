@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="keywords"   content=" " >
     <meta name="robots"     content="index,follow " >
-    <meta name="author"     content="Antoine Humbert" >
+    <meta name="author"     content="PinnacklTeam" >
     <link rel="icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon"/>
 
     <meta property="og:title" content="Cabrettes et Cabrettaires"/>
