@@ -1,0 +1,368 @@
+@font-face {
+  font-family: "DINCond-Bold";
+  src: url("/fonts/typo/DINCond-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: "DINCond-Light";
+  src: url("/fonts/typo/DINCond-Light.otf");
+  font-weight: normal;
+  font-style: italic;
+  font-variant: normal;
+}
+
+body {
+  padding-top: 30px;
+  font-family: "DINCond-Bold", sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  display: inline-block;
+}
+
+header img {
+  display: inline-block;
+}
+
+section {
+  position: relative;
+  margin: auto;
+  margin-bottom: 50px;
+  width: 70%;
+}
+
+section h2 {
+  width: 70px;
+  margin: auto;
+  height: 100px;
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+section h3 {
+  color: #ffed00;
+  position: relative;
+  font-size: 25px;
+}
+
+section h4 {
+  position: relative;
+  font-size: 23px;
+  margin-bottom: 30px;
+}
+
+section hr {
+  border-color: #ffed00;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+section .row {
+  margin-bottom: 30px;
+}
+
+section .row .col-md-6 {
+  margin-bottom: 40px;
+}
+
+section .row .col-md-6 p {
+  font-family: "DINCond-Light", sans-serif;
+}
+
+section .row .col-md-12 p {
+  font-family: "DINCond-Light", sans-serif;
+}
+
+section .row p {
+  font-family: "DINCond-Light", sans-serif;
+}
+
+section .row p h4 {
+  font-family: "DINCond-Bold", sans-serif;
+}
+
+#work-content {
+  margin-top: 60px;
+}
+
+#work-content ul li span {
+  font-family: "DINCond-Light", sans-serif;
+}
+
+#team {
+  width: 50%;
+}
+
+#team img {
+  width: 100%;
+}
+
+#team a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#team a:hover {
+  color: #fff;
+}
+
+#team .team-description h4 small {
+  font-size: 14px;
+  font-family: "DINCond-Light", sans-serif;
+}
+
+#team .team-description ul {
+  padding-left: 10px;
+  list-style: square;
+}
+
+#team .team-description ul li {
+  font-family: "DINCond-Light", sans-serif;
+}
+
+#team .compositeur h4 {
+  margin-top: 20px;
+}
+
+#studio {
+  width: 50%;
+}
+
+#studio a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#studio a:hover {
+  color: #fff;
+}
+
+#contact {
+  width: 50%;
+}
+
+#contact .link-fb-sc img {
+  margin-right: 10px;
+  margin-left: 0;
+  width: 50px;
+  height: 50px;
+}
+
+#contact img {
+  width: 50%;
+  margin-left: 30%;
+}
+
+#contact .carre-yellow {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+#contact ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#contact ul li span {
+  font-family: "DINCond-Light", sans-serif;
+}
+
+#contact a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.sub-menu {
+  width: 45%;
+  margin: auto;
+}
+
+.sub-menu form input[type="radio"] {
+  margin-right: 3px;
+}
+
+.sub-menu form label {
+  letter-spacing: 1px;
+  margin-right: 30px;
+}
+
+.sub-menu .carre-white-sub {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+.separator {
+  height: 100px;
+  text-align: center;
+}
+
+.separator img {
+  width: 80px;
+}
+
+.carre-white {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.carre-yellow {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ffed00;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+
+.menu {
+  background-color: #ffed00;
+  color: black;
+  width: 160px;
+  padding: 10px;
+  position: fixed;
+  right: 15%;
+  top: 110px;
+  z-index: 200;
+}
+
+.menu ul {
+  list-style-type: square;
+  margin-left: 0;
+  padding-left: 20px;
+  margin-top: 40px;
+  width: 120px;
+}
+
+.menu ul li {
+  border-bottom: 1px solid black;
+}
+
+.menu ul li ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.menu ul li ul li {
+  border-bottom: none;
+  font-size: 12px;
+}
+
+.menu a {
+  color: black;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.menu a:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.menu a:active {
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: none;
+}
+
+.menu div .btn-close-menu {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.menu div .btn-close-menu:hover {
+  cursor: pointer;
+}
+
+.title-video:hover {
+  cursor: pointer;
+}
+
+.btn-menu {
+  position: fixed;
+  right: 15%;
+  z-index: 200;
+  top: 110px;
+  background-color: transparent;
+}
+
+.btn-menu img {
+  width: 50px;
+  height: 5Opx;
+}
+
+.btn-menu:hover {
+  cursor: pointer;
+}
+
+.rectangle-white {
+  height: 3px;
+  width: 30px;
+  margin-bottom: 5px;
+  background-color: #fff;
+}
+
+.rectangle-yellow {
+  height: 1px;
+  width: 50px;
+  margin-bottom: 70px;
+  background-color: #ffed00;
+}
+
+.detail-video {
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.detail-video ul {
+  list-style: none;
+  display: inline-block;
+  font-family: "DINCond-Light", sans-serif;
+}
+
+.detail-video ul li span {
+  font-family: "DINCond-Bold", sans-serif;
+}
+
+video[poster] {
+  width: 100%;
+}
+
+.see-more {
+  color: #ffed00;
+}
+
+.see-more:hover {
+  cursor: pointer;
+}
+
+.contact-link-content ul {
+  display: inline-block;
+  margin-right: 110px;
+}
+
+.contact-link-content .link-fb-sc {
+  vertical-align: top;
+  margin-top: 30px;
+  display: inline-block;
+}

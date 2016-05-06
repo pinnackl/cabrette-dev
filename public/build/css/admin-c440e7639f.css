@@ -1,0 +1,344 @@
+.navbar {
+  background-color: #f4f4f4;
+}
+
+.admin-container {
+  padding-top: 15px;
+  font-size: 15px;
+}
+
+.admin-container .alert {
+  padding: 10px 15px;
+}
+
+.admin-container .alert .close {
+  font-size: 1.2rem;
+}
+
+.admin-container .alert .close:focus {
+  outline: 0;
+}
+
+.admin-container .breadcrumb {
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+}
+
+.admin-container h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.admin-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.admin-container .btn-group-vertical {
+  width: 100%;
+}
+
+.admin-container .form-group {
+  margin-bottom: 12px;
+}
+
+.admin-container .form-control {
+  padding: 0.3rem 0.7rem;
+  font-size: 15px;
+}
+
+.admin-container select.form-control {
+  height: 35px;
+}
+
+.admin-container .form-control-label {
+  padding: 0.3625rem 0.9375rem;
+  margin-bottom: 0;
+}
+
+.admin-container .form-control-label .markdown {
+  height: 16px;
+  margin-left: 5px;
+}
+
+.admin-container .btn:focus {
+  outline: none;
+}
+
+.admin-container .table td {
+  padding: 12px 14px;
+}
+
+.admin-container .table .action-cell {
+  padding: 7px 14px;
+  text-align: right;
+}
+
+.admin-container .table .action-cell .btn-sm {
+  padding: 0px 5px;
+  margin-left: 7px;
+  font-size: 21px;
+  color: #888;
+}
+
+.admin-container .table .action-cell .btn-sm:hover,
+.admin-container .table .action-cell .btn-sm:focus {
+  color: #000;
+}
+
+.admin-container .table .action-cell form {
+  display: inline-block;
+}
+
+.admin-container .table-sm td {
+  padding: 6px 7px;
+}
+
+.admin-container .table-hover tbody tr:hover {
+  background-color: #fcfcfc;
+}
+
+.admin-container .pagination-container {
+  text-align: center;
+}
+
+.admin-container ul.evaluation-questions {
+  margin-bottom: 20px;
+}
+
+.admin-container ul.evaluation-questions li.evaluation-question {
+  padding: 0;
+}
+
+.admin-container ul.evaluation-questions li.evaluation-question h4.list-group-item-heading {
+  padding: 10px 10px 10px 20px;
+  background-color: #f7f7f9;
+  margin-bottom: 0;
+}
+
+.admin-container ul.evaluation-questions li.evaluation-question h4.list-group-item-heading i {
+  margin-right: 10px;
+}
+
+.admin-container ul.evaluation-questions li.evaluation-question h4.list-group-item-heading button {
+  float: right;
+  margin-top: -5px;
+  padding: 0 10px;
+  font-size: 21px;
+  color: #888;
+}
+
+.admin-container ul.evaluation-questions li.evaluation-question h4.list-group-item-heading button:hover,
+.admin-container ul.evaluation-questions li.evaluation-question h4.list-group-item-heading button:focus {
+  text-decoration: none;
+  color: #000;
+}
+
+.admin-container ul.evaluation-questions li.evaluation-question .list-group-item-text {
+  border-top: 1px solid #e5e5e5;
+  padding: 10px 20px;
+}
+
+.admin-container ul.evaluation-questions li.evaluation-question .list-group-item-text b.answer {
+  display: block;
+  margin-top: 12px;
+}
+
+.admin-container ul.evaluation-questions li.evaluation-question .list-group-item-text b.answer label {
+  font-weight: normal;
+  margin: 0 10px;
+}
+
+.admin-container ul.evaluation-questions li.evaluation-question .list-group-item-text button {
+  float: right;
+}
+
+.admin-container .button-add-question {
+  margin-bottom: 10px;
+}
+
+.admin-container #add-question b.answer {
+  display: block;
+  margin-top: 12px;
+}
+
+.admin-container #add-question b.answer label {
+  font-weight: normal;
+  margin: 0 10px;
+}
+
+.admin-container #add-question button {
+  float: right;
+}
+
+.admin-container .cards {
+  margin-bottom: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.admin-container .cards .card {
+  position: relative;
+  list-style: none;
+  padding-top: 13px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+
+.admin-container .cards .card h2 {
+  font-size: 20px;
+  margin-left: 15px;
+  margin-bottom: 18px;
+}
+
+.admin-container .cards .card h2 .fa {
+  margin-right: 5px;
+}
+
+.admin-container .cards .card h2 .rename-card {
+  display: inline-block;
+  width: 80%;
+  margin-top: -5px;
+  margin-bottom: -6px;
+  margin-left: -6px;
+}
+
+.admin-container .cards .card h2 .rename-card input,
+.admin-container .cards .card h2 .rename-card button {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.admin-container .cards .card h2 .rename-card input {
+  width: 70%;
+  padding: 3px 5px;
+  font-size: 20px;
+  line-height: 1;
+  margin-top: -5px;
+}
+
+.admin-container .cards .card h2 .rename-card button {
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 1.2;
+  margin-top: -5px;
+}
+
+.admin-container .cards .card .card-items {
+  min-height: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.admin-container .cards .card .card-items .card-item {
+  position: relative;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 10px;
+  margin-bottom: -1px;
+  background-color: #f4f4f4;
+}
+
+.admin-container .cards .card .card-items .card-item:last-child {
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.admin-container .cards .card .fa-bars {
+  cursor: move;
+  margin-right: 3px;
+}
+
+.admin-container .cards .card > .fa-bars {
+  margin-bottom: 20px;
+}
+
+.admin-container .cards .card .card-button {
+  position: absolute;
+  top: 8px;
+  font-size: 21px;
+  color: #888;
+  padding: 0;
+}
+
+.admin-container .cards .card .card-button:hover,
+.admin-container .cards .card .card-button:focus {
+  text-decoration: none;
+  color: #000;
+}
+
+.admin-container .cards .card .add-card-item-button {
+  right: 79px;
+}
+
+.admin-container .cards .card .rename-card-button {
+  right: 44px;
+}
+
+.admin-container .cards .card .remove-card-button {
+  right: 12px;
+}
+
+.admin-container .cards .card .remove-card-item-button {
+  right: 12px;
+  top: -1px;
+}
+
+.admin-container .cards .card .add-card-item-form {
+  padding: 10px;
+}
+
+.admin-container .cards .card .add-card-item-form input {
+  display: inline-block;
+  width: 480px;
+}
+
+.admin-container .cards .card .add-card-item-form button {
+  display: inline-block;
+  line-height: 1.3;
+}
+
+.admin-container .button-add-chapter.btn-link {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.admin-container .button-add-chapter.btn-link:hover,
+.admin-container .button-add-chapter.btn-link:focus {
+  text-decoration: none;
+}
+
+.admin-container .form-courses-users input {
+  padding: 0.375rem 0.75rem;
+  width: 50%;
+}
+
+.ui-helper-hidden-accessible {
+  display: none;
+}
+
+ul.ui-autocomplete {
+  background-color: #fff;
+  list-style: none;
+  width: 480px;
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-radius: 0 0 3px 3px;
+  margin: 0;
+  padding: 0;
+}
+
+ul.ui-autocomplete .ui-menu-item {
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  padding-left: 10px;
+}
+
+ul.ui-autocomplete .ui-menu-item.ui-state-focus,
+ul.ui-autocomplete .ui-menu-item.ui-state-active {
+  background-color: #f4f4f4;
+}
