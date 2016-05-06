@@ -12,11 +12,11 @@ Laravel 5 + MongoDB
 
 ### Installation projet
 
-git clone git@github.com:pinnackl/cabrette-dev.git <br>
+`git clone git@github.com:pinnackl/cabrette-dev.git <br>
 cd cabrette-dev <br>
 composer install <br>
 npm install <br>
 npm install gulp <br>
-php artisan migrate <br>
+php artisan migrate`
 
 
