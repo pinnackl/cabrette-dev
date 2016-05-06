@@ -14,13 +14,9 @@
                 {!! Form::bsEmail('email', null, ['required']) !!}
                 {!! Form::bsText('first_name') !!}
                 {!! Form::bsText('last_name') !!}
-                {!! Form::bsPhone('phone_1') !!}
-                {!! Form::bsPhone('phone_2') !!}
-                {!! Form::bsText('zip_code') !!}
-                {!! Form::bsText('function') !!}
-                {!! Form::bsText('password', '') !!}
-                {!! Form::bsSelect('role', ['admin' => 'Admin', 'coach' => 'Coach', 'user' => 'Utilisateur'], 'user', ['required']) !!}
-
+                {!! Form::bsPhone('phone') !!}
+                {!! Form::bsPassword('password', '') !!}
+                {!! Form::bsSelect('role', ['admin' => 'Admin', 'partner' => 'Partenaire', 'user' => 'Utilisateur'], 'user', ['required']) !!}
                 {!! Form::bsButton('Enregistrer') !!}
             {!! Form::close() !!}
 

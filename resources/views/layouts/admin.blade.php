@@ -8,13 +8,22 @@
 
     <nav class="navbar navbar-light bg-faded">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">Back-Office - <b>Cabrette et Cabrettaires</b></a>
+            <a class="navbar-brand" href="{{ url('/') }}"><b>Cabrette et Cabrettaires</b></a>
             <ul class="nav navbar-nav">
                 <li class="nav-item {{ Request::segments()[1] == 'users' ? 'active' : ''}}">
                     <a class="nav-link" href="{{ route('admin.users.index') }}">Utilisateurs</a>
                 </li>
                 <li class="nav-item {{ Request::segments()[1] == 'posts' ? 'active' : ''}}">
                     <a class="nav-link" href="{{ route('admin.posts.index') }}">Posts</a>
+                </li>
+                <li class="nav-item {{ Request::segments()[1] == 'posts' ? 'active' : ''}}">
+                    <a class="nav-link" href="{{ route('admin.posts.index') }}">Events</a>
+                </li>
+                <li class="nav-item {{ Request::segments()[1] == 'posts' ? 'active' : ''}}">
+                    <a class="nav-link" href="{{ route('admin.posts.index') }}">Administration</a>
+                </li>
+                <li class="nav-item {{ Request::segments()[1] == 'posts' ? 'active' : ''}}">
+                    <a class="nav-link" href="{{ route('admin.posts.index') }}">Média</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav pull-right">

@@ -17,12 +17,19 @@ Route::get('logout', ['as' => 'login.destroy', 'uses' => 'LoginController@destro
 
 Route::get('/', ['as' => '/', 'uses' => 'HomeController@index']);
 
-Route::get('work', ['as' => 'work', 'uses' => 'WorkController@index']);
-
 Route::group(['middleware' => 'auth'], function () {
 
     Route::group(['middleware' => 'admin', 'namespace' => 'Admin', 'prefix' => 'admin'], function () {
         Route::resource('users', 'UserController');
         Route::resource('posts', 'PostController');
+    });
+
+    Route::group(['middleware' => 'user', 'namespace' => 'User', 'prefix' => 'user'], function () {
+
+    });
+
+
+    Route::group(['middleware' => 'partner', 'namespace' => 'Partner', 'prefix' => 'partner'], function () {
+
     });
 });

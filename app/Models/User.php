@@ -19,7 +19,7 @@ class User extends BaseModel implements AuthenticatableContract, CanResetPasswor
         'role' => 'user'
     ];
 
-    protected $fillable = ['email', 'first_name', 'last_name', 'phone_1', 'phone_2', 'function', 'zip_code', 'role'];
+    protected $fillable = ['email', 'first_name', 'last_name', 'phone', 'role'];
 
     protected $validationRules = [
         'role'  => 'required|in:admin,user,coach',
@@ -31,11 +31,6 @@ class User extends BaseModel implements AuthenticatableContract, CanResetPasswor
     public function isAdmin()
     {
         return $this->role === 'admin';
-    }
-
-    public function scopeWhereNotInCourse(Builder $query, Course $course)
-    {
-        return $query->whereNotIn('_id', $course->user_ids ?: []);
     }
 
     public function getFullNameAttribute()

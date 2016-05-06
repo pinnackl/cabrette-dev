@@ -15,10 +15,7 @@
                 {!! Form::bsEmail('email', null, ['required']) !!}
                 {!! Form::bsText('first_name') !!}
                 {!! Form::bsText('last_name') !!}
-                {!! Form::bsPhone('phone_1') !!}
-                {!! Form::bsPhone('phone_2') !!}
-                {!! Form::bsText('zip_code') !!}
-                {!! Form::bsText('function') !!}
+                {!! Form::bsPhone('phone') !!}
                 {!! Form::bsSelect('role', ['admin' => 'Admin', 'coach' => 'Coach', 'user' => 'Utilisateur'], null, ['required']) !!}
 
                 {!! Form::bsButton('Enregistrer') !!}

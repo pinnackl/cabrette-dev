@@ -118,6 +118,10 @@ return [
         'realisateur' => 'Realisateur',
         'sound_design' => 'Sound Design',
         'groupe' => 'Groupe',
+        'first_name' => 'Prénom',
+        'last_name' => 'Nom',
+        'phone' => 'Numéro tel',
+        'role' => 'Rôle'
      ],
 
 ];

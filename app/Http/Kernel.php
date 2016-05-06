@@ -27,6 +27,8 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         'auth' => Middleware\Authenticate::class,
-        'admin' => Middleware\Admin::class
+        'admin' => Middleware\Admin::class,
+        'user' => Middleware\User::class,
+        'partner' => Middleware\Partner::class,
     ];
 }
