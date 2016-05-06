@@ -43,3 +43,36 @@ header img {
   height: 400px;
   width: 100%;
 }
+
+#footer {
+  height: 60px;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+#footer ul {
+  list-style: none;
+}
+
+#footer ul li {
+  display: inline-block;
+}
+
+.content-home {
+  min-height: 500px;
+  padding: 30px;
+}
+
+.content-home .event-block {
+  min-height: 200px;
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #0066bb;
+}
+
+.content-home .right-block {
+  width: 78%;
+  display: inline-block;
+  vertical-align: top;
+}

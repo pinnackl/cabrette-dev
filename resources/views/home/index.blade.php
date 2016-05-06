@@ -36,4 +36,39 @@
       </a>
     </div>
   </section>
+
+  <section class="content-home">
+    <div class="event-block col-md-3 ">
+      <h2>Event</h2>
+    </div>
+
+    <div class="right-block">
+      <div class="col-md-4">
+        <h2>Annonces</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cumque delectus doloremque, dolores eius, est in labore modi praesentium quas reiciendis saepe voluptate, voluptatem. Aut blanditiis consectetur fuga nihil repellendus.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h2>Cours</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cumque delectus doloremque, dolores eius, est in labore modi praesentium quas reiciendis saepe voluptate, voluptatem. Aut blanditiis consectetur fuga nihil repellendus.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h2>Forum</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cumque delectus doloremque, dolores eius, est in labore modi praesentium quas reiciendis saepe voluptate, voluptatem. Aut blanditiis consectetur fuga nihil repellendus.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h2>Calendrier</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cumque delectus doloremque, dolores eius, est in labore modi praesentium quas reiciendis saepe voluptate, voluptatem. Aut blanditiis consectetur fuga nihil repellendus.
+        </p>
+      </div>
+    </div>
+  </section>
 @stop

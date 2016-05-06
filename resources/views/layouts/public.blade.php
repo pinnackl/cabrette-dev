@@ -8,4 +8,15 @@
 
     @yield('content')
 
+
+    <footer id="footer">
+        <div class="container">
+            <ul>
+                <li>CGU</li> -
+                <li>Contact</li>
+            </ul>
+        </div>
+    </footer>
+
+
 @stop

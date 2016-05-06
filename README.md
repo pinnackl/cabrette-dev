@@ -17,7 +17,6 @@ cd cabrette-dev <br>
 composer install <br>
 npm install <br>
 npm install gulp <br>
-composer install <br>
 php artisan migrate <br>
 
 
