@@ -56,7 +56,7 @@ class PostController extends BaseController
         $post = Post::findOrFail($id);
 
         $post->fill(Input::all());
-        
+
         if(Input::file()) {
             if (Input::file('cover')) {
                 $imgCoverFile = Input::file('cover');
