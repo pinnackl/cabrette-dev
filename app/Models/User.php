@@ -33,6 +33,16 @@ class User extends BaseModel implements AuthenticatableContract, CanResetPasswor
         return $this->role === 'admin';
     }
 
+    public function isPartner()
+    {
+        return $this->role === 'partner';
+    }
+
+    public function isUser()
+    {
+        return $this->role === 'user';
+    }
+
     public function getFullNameAttribute()
     {
         return $this->first_name . ' ' . $this->last_name;

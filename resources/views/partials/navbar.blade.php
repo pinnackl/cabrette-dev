@@ -37,11 +37,17 @@
             <a class="nav-link" href="#">Partenaires</a>
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url('signup') }}">Inscription</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ url('login') }}">Connexion</a>
-        </li>
+        @if(Auth::user())
+            <li class="nav-item pull-right">
+                <a class="nav-link " href="{{ url('logout') }}">Deconnexion</a>
+            </li>
+        @else
+            <li class="nav-item pull-right">
+                <a class="nav-link" href="{{ url('signup') }}">Inscription</a>
+            </li>
+            <li class="nav-item pull-right">
+                <a class="nav-link " href="{{ url('login') }}">Connexion</a>
+            </li>
+        @endif
     </ul>
 </nav>

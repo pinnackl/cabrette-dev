@@ -5,7 +5,7 @@
 @stop
 
 @section('base_content')
-    <div class="container public-container">
-        @yield('content')
-    </div>
+
+    @yield('content')
+
 @stop

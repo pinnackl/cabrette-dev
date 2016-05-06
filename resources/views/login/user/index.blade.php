@@ -1,20 +1,20 @@
 @extends('layouts.public')
 
-@section('base_content')
+@section('content')
 
     @include('partials.navbar')
 
-    <div class="card  col-md-5">
-        <div class="card-header">
-            Connexion - Cabrette et Cabrettaire Admin
-        </div>
-        <div class="card-block">
-            {!! Form::open(['route' => 'login.store']) !!}
+    <div class="row">
+        <div class="card col-md-6 col-md-offset-3">
+            <div class="card-block">
+                {!! Form::open(['route' => 'login.store']) !!}
                 {!! Form::bsEmail('email', null, ['required']) !!}
                 {!! Form::bsPassword('password', null, ['required']) !!}
                 {!! Form::bsButton('Envoyer') !!}
-            {!! Form::close() !!}
+                {!! Form::close() !!}
+            </div>
         </div>
+
     </div>
 
 @stop
