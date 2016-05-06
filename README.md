@@ -17,6 +17,6 @@ Laravel 5 + MongoDB
 `composer install` <br>
 `npm install` <br>
 `npm install gulp` <br>
-php artisan migrate`
+`php artisan migrate`
 
 
