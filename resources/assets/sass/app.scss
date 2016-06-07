@@ -42,9 +42,16 @@ header {
     }
 }
 
-section {
+header {
+    a {
+        text-decoration: none;
+        color: black;
 
-
+        &:hover {
+            text-decoration: none;
+            color: black;
+        }
+    }
 }
 
 .content-slider {
@@ -90,5 +97,17 @@ section {
         width: 78%;
         display: inline-block;
         vertical-align: top;
+    }
+}
+
+
+.content-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+    min-height: 540px;
+
+    h2 {
+        margin-bottom: 30px;
     }
 }

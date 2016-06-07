@@ -24,4 +24,9 @@ class PageController extends BaseController
 
         return view('page.cabrette', compact('post'));
     }
+
+    public function contact()
+    {
+        return view('page.contact');
+    }
 }

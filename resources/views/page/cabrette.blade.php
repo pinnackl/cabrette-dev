@@ -4,9 +4,9 @@
 
     @include('partials.navbar')
 
-    <section style="max-width: 1200px;margin: auto;">
+    <section class="content-section">
         <div class="row">
-            <h2>{{ $post->title }}</h2>
+            <h2>La {{ $post->title }}</h2>
 
             <div class="col-md-11">
                 {!! Markdown::convertToHtml($post->content)  !!}

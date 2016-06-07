@@ -6,11 +6,8 @@
 
     <section class="content-section">
         <div class="row">
-            <h2>L'{{ $post->title }}</h2>
+            <h2>Contact</h2>
 
-            <div class="col-md-11">
-                {!! Markdown::convertToHtml($post->content)  !!}
-            </div>
         </div>
     </section>
 

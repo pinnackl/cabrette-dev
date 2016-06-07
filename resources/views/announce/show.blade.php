@@ -4,7 +4,7 @@
 
     @include('partials.navbar')
 
-    <section style="max-width: 1200px;margin: auto;">
+    <section class="content-section">
         <div class="row">
             <h2>{{ $announce->title }}</h2>
 
