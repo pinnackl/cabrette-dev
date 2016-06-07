@@ -12,7 +12,7 @@ class HomeController extends BaseController
         $courses = Course::all();
         $announces = Announce::all();
 
-        $subjects = Post::all();
+        $subjects = Post::where('title', '!=', 'association')->where('title', '!=', 'cabrette')->get();
 
         return view('home.index', compact('courses', 'announces', 'subjects'));
     }

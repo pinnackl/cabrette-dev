@@ -9,26 +9,15 @@ class Post extends BaseModel
 
     protected $table = 'posts';
 
-    protected $fillable = ['title', 'content', 'author','images_ids', 'type', 'category_id'];
+    protected $fillable = ['title', 'content', 'author','images_ids', 'type', 'category_id', 'theme_id'];
 
     public function user()
     {
         return $this->belongsTo('App\Models\User', 'author');
     }
 
-    public function category()
+    public function theme()
     {
-        return $this->belongsTo('App\Models\Category', 'category_id');
+        return $this->hasOne('App\Models\Theme', 'theme_id');
     }
-
-    public function getUploadFolderPathAttribute()
-    {
-        return public_path().'/uploads/'.$this->uploadFolder;
-    }
-
-    public function getUploadCoverFolderPathAttribute()
-    {
-        return public_path().'/uploads/'.$this->uploadCoverFolder;
-    }
-
 }

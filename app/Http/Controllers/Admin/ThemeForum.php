@@ -9,7 +9,7 @@ use App\Models\Media;
 use App\Models\Post;
 use Input, Auth;
 
-class ForumController extends BaseController
+class ThemeForumController extends BaseController
 {
     public function index()
     {
