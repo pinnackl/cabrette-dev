@@ -32,7 +32,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('announces', 'AnnounceController');
         Route::resource('courses', 'CourseController');
         Route::resource('forums', 'ForumController');
+        Route::resource('pages', 'PageController');
 
+        Route::get('pages.association', ['as' => 'admin.pages.association', 'uses' => 'PageController@association']);
+        Route::get('pages.cabrette', ['as' => 'admin.pages.cabrette', 'uses' => 'PageController@cabrette']);
     });
 
     Route::group(['middleware' => 'user', 'namespace' => 'User', 'prefix' => 'user'], function () {
@@ -47,4 +50,6 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::resource('courses', 'CourseController');
 Route::resource('announces', 'AnnounceController');
+Route::get('association', ['as' => 'association', 'uses' => 'PageController@association']);
+Route::get('cabrette', ['as' => 'cabrette', 'uses' => 'PageController@cabrette']);
 

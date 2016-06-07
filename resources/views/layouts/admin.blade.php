@@ -31,6 +31,13 @@
                 <li class="nav-item {{ Request::segments()[1] == 'forums' ? 'active' : ''}}">
                     <a class="nav-link" href="{{ route('admin.forums.index') }}">Forum</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ route('admin.pages.association') }}">L'association</a>
+                        <a class="dropdown-item" href="{{ route('admin.pages.cabrette') }}">La cabrette</a>
+                    </div>
+                </li>
             </ul>
             <ul class="nav navbar-nav pull-right">
                 <li class="nav-item" style="margin-right:10px">

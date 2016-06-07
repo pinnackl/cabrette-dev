@@ -14,10 +14,10 @@
             <a class="nav-link" href="#">Actualités <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">L'association</a>
+            <a class="nav-link" href="{{ route('association') }}">L'association</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">La cabrette</a>
+            <a class="nav-link" href="{{ route('cabrette') }}">La cabrette</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Media</a>
