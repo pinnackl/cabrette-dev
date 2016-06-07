@@ -24,4 +24,38 @@ class AnnounceController extends BaseController
 
         return view('admin.announce.edit', compact('announce', 'types'));
     }
+
+    public function store()
+    {
+        $announce = new Announce(Input::all());
+        $announce->save();
+
+        return redirect(route('admin.announces.index'));
+    }
+
+    public function edit($id)
+    {
+        $announce = Announce::findOrFail($id);
+
+        return view('admin.announce.edit', compact('announce'));
+    }
+
+    public function update($id)
+    {
+        $announce = Announce::findOrFail($id);
+
+        $announce->fill(Input::all());
+
+        $announce->save();
+
+        return back()->with('info', 'Modifications bien enregistrées.');
+    }
+
+    public function destroy($id)
+    {
+        $announce = Announce::findOrFail($id);
+        $announce->delete();
+
+        return redirect(route('admin.announces.index'));
+    }
 }
