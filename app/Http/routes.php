@@ -29,6 +29,9 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('posts', 'PostController');
         Route::resource('events', 'EventController');
         Route::resource('medias', 'MediaController');
+        Route::resource('announces', 'AnnounceController');
+        Route::resource('courses', 'CourseController');
+
     });
 
     Route::group(['middleware' => 'user', 'namespace' => 'User', 'prefix' => 'user'], function () {

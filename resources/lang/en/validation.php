@@ -123,7 +123,8 @@ return [
         'last_name' => 'Nom',
         'phone' => 'Numéro tel',
         'role' => 'Rôle',
-        'date_start' => 'Date de début'
+        'date_start' => 'Date de début',
+        'announce' => 'Annonce'
      ],
 
 ];

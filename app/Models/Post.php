@@ -9,11 +9,16 @@ class Post extends BaseModel
 
     protected $table = 'posts';
 
-    protected $fillable = ['title', 'content', 'author', 'video_filename','cover_filename', 'type', 'compositeur', 'realisateur', 'sound_design', 'client', 'agence', 'groupe', 'first_video'];
+    protected $fillable = ['title', 'content', 'author','images_ids', 'type', 'category_id'];
 
     public function user()
     {
         return $this->belongsTo('App\Models\User', 'author');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category', 'category_id');
     }
 
     public function getUploadFolderPathAttribute()
@@ -25,7 +30,5 @@ class Post extends BaseModel
     {
         return public_path().'/uploads/'.$this->uploadCoverFolder;
     }
-
-
 
 }
