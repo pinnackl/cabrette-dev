@@ -8,7 +8,7 @@
     </ol>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <legend>Modifier les informations</legend>
             {!! Form::model($course, ['route' => ['admin.courses.update', $course], 'method' => $course->exist ? 'PUT' : 'POST', 'files' => true]) !!}
             {!! Form::bsText('title') !!}

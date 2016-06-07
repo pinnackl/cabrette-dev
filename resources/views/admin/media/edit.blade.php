@@ -8,7 +8,7 @@
     </ol>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <legend>Modifier les informations</legend>
             {!! Form::model($media, ['route' => ['admin.medias.update', $media], 'method' => $media->exist ? 'PUT' : 'POST', 'files' => true]) !!}
 

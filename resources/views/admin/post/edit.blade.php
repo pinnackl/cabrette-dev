@@ -8,7 +8,7 @@
     </ol>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <legend>Modifier les informations</legend>
             {!! Form::model($post, ['route' => $post->exists ? ['admin.posts.update', $post] : ['admin.posts.store'] , 'method' => $post->exists ?  'PUT' : 'POST ', 'files' => true]) !!}
                 {!! Form::bsText('title') !!}
