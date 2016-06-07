@@ -39,7 +39,7 @@ class PostController extends BaseController
 
         $post->save();
 
-        return redirect(route('admin.posts.index'));
+        return redirect(route('admin.forums.index'));
     }
 
     public function edit($id)

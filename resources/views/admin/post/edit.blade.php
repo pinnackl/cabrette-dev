@@ -4,7 +4,7 @@
 
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.posts.index') }}">Posts</a></li>
-        <li class="active">{{ $post->exists ? 'Modifier le poste' : 'Nouveau post' }}</li>
+        <li class="active">{{ $post->exists ? 'Modifier le sujet' : 'Nouveau sujet' }}</li>
     </ol>
 
     <div class="row">

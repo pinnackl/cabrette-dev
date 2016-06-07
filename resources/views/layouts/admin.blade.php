@@ -25,12 +25,11 @@
                 <li class="nav-item {{ Request::segments()[1] == 'courses' ? 'active' : ''}}">
                     <a class="nav-link" href="{{ route('admin.courses.index') }}">Cours</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administration</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{ route('admin.medias.index') }}">Média</a>
-                        <a class="dropdown-item" href="#">Forum</a>
-                    </div>
+                <li class="nav-item {{ Request::segments()[1] == 'medias' ? 'active' : ''}}">
+                    <a class="nav-link" href="{{ route('admin.medias.index') }}">Média</a>
+                </li>
+                <li class="nav-item {{ Request::segments()[1] == 'forums' ? 'active' : ''}}">
+                    <a class="nav-link" href="{{ route('admin.forums.index') }}">Forum</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav pull-right">
@@ -68,4 +67,8 @@
         @yield('content')
     </div>
 
+    <script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'content' );
+    </script>
 @stop

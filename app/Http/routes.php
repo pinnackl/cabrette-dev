@@ -31,6 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('medias', 'MediaController');
         Route::resource('announces', 'AnnounceController');
         Route::resource('courses', 'CourseController');
+        Route::resource('forums', 'ForumController');
 
     });
 
@@ -43,3 +44,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     });
 });
+
+Route::resource('courses', 'CourseController');
+Route::resource('announces', 'AnnounceController');
+

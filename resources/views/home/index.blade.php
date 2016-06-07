@@ -45,22 +45,34 @@
     <div class="right-block">
       <div class="col-md-4">
         <h2>Annonces</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cumque delectus doloremque, dolores eius, est in labore modi praesentium quas reiciendis saepe voluptate, voluptatem. Aut blanditiis consectetur fuga nihil repellendus.
-        </p>
+        <ul>
+          @foreach($announces as $announce)
+            <li>
+              <a href="{{ route('announces.show', [$announce]) }}">{{ $announce->title }}</a>
+            </li>
+          @endforeach
+        </ul>
       </div>
       <div class="col-md-4">
         <h2>Cours</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cumque delectus doloremque, dolores eius, est in labore modi praesentium quas reiciendis saepe voluptate, voluptatem. Aut blanditiis consectetur fuga nihil repellendus.
-        </p>
+        <ul>
+          @foreach($courses as $course)
+            <li>
+              <a href="{{ route('courses.show', [$course]) }}">{{ $course->title }}</a>
+            </li>
+          @endforeach
+        </ul>
       </div>
 
       <div class="col-md-4">
         <h2>Forum</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cumque delectus doloremque, dolores eius, est in labore modi praesentium quas reiciendis saepe voluptate, voluptatem. Aut blanditiis consectetur fuga nihil repellendus.
-        </p>
+        <ul>
+          @foreach($subjects as $subject)
+            <li>
+              <a href="#">{{ $subject->title }}</a>
+            </li>
+          @endforeach
+        </ul>
       </div>
 
       <div class="col-md-4">

@@ -35,7 +35,7 @@ class Authenticate
     public function handle($request, Closure $next)
     {
         if ($this->auth->guest()) {
-            return redirect()->guest('work')->with('error', 'Vous devez être connecté pour accéder à cette page.');
+            return redirect()->guest('/')->with('error', 'Vous devez être connecté pour accéder à cette page.');
         }
 
         return $next($request);

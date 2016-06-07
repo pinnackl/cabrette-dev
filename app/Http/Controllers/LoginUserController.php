@@ -22,9 +22,6 @@ class LoginUserController extends BaseController
 
     public function store()
     {
-
-        var_dump('dans store loginUser');
-
         $user = new User(Input::all());
 
         if(Input::get('confirm_password') != Input::get('password'))
