@@ -28,6 +28,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('categories', 'CategoryController');
         Route::resource('posts', 'PostController');
         Route::resource('events', 'EventController');
+        Route::resource('medias', 'MediaController');
     });
 
     Route::group(['middleware' => 'user', 'namespace' => 'User', 'prefix' => 'user'], function () {

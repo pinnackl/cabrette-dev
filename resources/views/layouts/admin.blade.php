@@ -31,7 +31,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administration</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Média</a>
+                        <a class="dropdown-item" href="{{ route('admin.medias.index') }}">Média</a>
                         <a class="dropdown-item" href="#">Forum</a>
                     </div>
                 </li>
