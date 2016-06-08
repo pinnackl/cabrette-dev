@@ -44,9 +44,6 @@
         </li>
 
         @if(Auth::user())
-            <li class="nav-item">
-                <a class="nav-link " href="">Proposer un article</a>
-            </li>
             <li class="nav-item pull-right">
                 <a class="nav-link " href="{{ url('logout') }}">Deconnexion</a>
             </li>

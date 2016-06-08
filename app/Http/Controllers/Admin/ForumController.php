@@ -13,7 +13,7 @@ class ForumController extends BaseController
 {
     public function index()
     {
-        $subjects = Post::where('title', '!=', 'association')->where('title', '!=', 'cabrette')->get();
+        $subjects = Post::where('title', '!=', 'association')->orWhere('title', '!=', 'cabrette')->get();
 
         return view('admin.forum.index', compact('subjects'));
     }

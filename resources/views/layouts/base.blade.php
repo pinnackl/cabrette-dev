@@ -14,6 +14,7 @@
     <meta property="og:url" content="" />
 
     <link rel="stylesheet" href="{{ url('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url('css/fullcalendar.min.css')}}">
 
     @yield('base_stylesheet')
 </head>
@@ -25,5 +26,13 @@
     <script type="text/javascript" src="{{ url('js/jquery-ui.min.js') }}"></script>
     <script type="text/javascript" src="{{ url('js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ url('js/main.js') }}"></script>
+
+    @yield('footer-link')
+
+    <script src="{{ asset('js/moment.min.js') }}"></script>
+    <script src="{{ asset('js/fullcalendar.js') }}"></script>
+    <script src="{{ asset('js/fullcalendar-fr.js') }}"></script>
+    <script src="{{ asset('js/user-calendar.js') }}"></script>
+
 </body>
 </html>

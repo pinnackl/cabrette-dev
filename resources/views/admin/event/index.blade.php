@@ -7,11 +7,20 @@
     </ol>
 
     <p>
-        <a href="{{ route('admin.posts.create') }}" class="btn btn-secondary">
+        <a href="{{ route('admin.events.create') }}" class="btn btn-secondary">
             <i class="fa fa-plus"></i> Nouvel évènement
         </a>
     </p>
 
-    @include('partials.table', ['items' => $events, 'resource' => 'posts', 'columns' => ['title', 'content', 'date_start'], 'actions' => ['edit', 'destroy']])
+    {{--@include('partials.table', ['items' => $events, 'resource' => 'events', 'columns' => ['title', 'content', 'date_start'], 'actions' => ['edit', 'destroy']])--}}
+
+    <div class="calendar calendar-event" data-fetch-url="{{ route('event-calendar') }}">
+        <div id="user-calendar"></div>
+    </div>
+
+@stop
+
+@section('footer-link')
+    @parent
 
 @stop

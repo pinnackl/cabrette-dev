@@ -9,15 +9,11 @@ class Post extends BaseModel
 
     protected $table = 'posts';
 
-    protected $fillable = ['title', 'content', 'author','images_ids', 'type', 'category_id', 'theme_id'];
+    protected $fillable = ['title', 'content', 'author','images_ids', 'type', 'category_id', 'theme_id', 'state'];
 
     public function user()
     {
         return $this->belongsTo('App\Models\User', 'author');
     }
 
-    public function theme()
-    {
-        return $this->hasOne('App\Models\Theme', 'theme_id');
-    }
 }

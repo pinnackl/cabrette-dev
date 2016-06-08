@@ -23,6 +23,8 @@ Route::get('/', ['as' => '/', 'uses' => 'HomeController@index']);
 
 Route::group(['middleware' => 'auth'], function () {
 
+    Route::get('event-calendar',['as' => 'event-calendar',  'uses' =>  'CalendarController@index']);
+
     Route::group(['middleware' => 'admin', 'namespace' => 'Admin', 'prefix' => 'admin'], function () {
         Route::resource('users', 'UserController');
         Route::resource('categories', 'CategoryController');
@@ -32,6 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('announces', 'AnnounceController');
         Route::resource('courses', 'CourseController');
         Route::resource('forums', 'ForumController');
+        Route::resource('themes', 'ThemeController');
         Route::resource('pages', 'PageController');
 
         Route::get('pages.association', ['as' => 'admin.pages.association', 'uses' => 'PageController@association']);
