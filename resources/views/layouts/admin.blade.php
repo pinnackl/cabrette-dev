@@ -11,14 +11,14 @@
             <a class="navbar-brand" href="{{ url('/') }}"><b>Cabrette et Cabrettaires</b></a>
             <ul class="nav navbar-nav">
                 <li class="nav-item {{ Request::segments()[1] == 'users' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.users.index') }}">Utilisateurs</a>
+                    <a class="nav-link" href="{{ route('admin.users.index') }}"> <i class="fa fa-users"></i> Utilisateurs</a>
                 </li>
 
                 <li class="nav-item {{ Request::segments()[1] == 'events' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.events.index') }}">Events</a>
+                    <a class="nav-link" href="{{ route('admin.events.index') }}"> <i class="fa fa-calendar"></i> Events</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Annonces</a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-list"></i> Annonces</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{{ route('admin.categories.index') }}">Catégories</a>
                         <a class="dropdown-item" href="{{ route('admin.announces.index') }}">Les annonces</a>
@@ -26,10 +26,10 @@
                 </li>
 
                 <li class="nav-item {{ Request::segments()[1] == 'courses' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.courses.index') }}">Cours</a>
+                    <a class="nav-link" href="{{ route('admin.courses.index') }}"><i class="fa fa-file-o"></i> Cours</a>
                 </li>
                 <li class="nav-item {{ Request::segments()[1] == 'medias' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.medias.index') }}">Média</a>
+                    <a class="nav-link" href="{{ route('admin.medias.index') }}"> <i class="fa fa-youtube-play"></i> Média</a>
                 </li>
 
                 <li class="nav-item dropdown">
