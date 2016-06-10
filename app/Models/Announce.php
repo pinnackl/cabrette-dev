@@ -6,7 +6,12 @@ class Announce extends BaseModel
 {
     protected $table = 'announces';
 
-    protected $fillable = ['title', 'content', 'images_ids', 'author'];
+    protected $fillable = ['title', 'content', 'images_ids', 'author', 'category_id'];
+
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category', 'category_id');
+    }
 
     public function getImagesIdsAttribute($value)
     {

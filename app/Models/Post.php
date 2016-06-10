@@ -16,4 +16,13 @@ class Post extends BaseModel
         return $this->belongsTo('App\Models\User', 'author');
     }
 
+    public function theme()
+    {
+        return $this->belongsTo('App\Models\Theme', 'theme_id');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment');
+    }
 }

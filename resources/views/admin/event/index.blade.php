@@ -5,7 +5,7 @@
     <ol class="breadcrumb">
         <li class="active">Events</li>
     </ol>
-    
+
 
     {{--@include('partials.table', ['items' => $events, 'resource' => 'events', 'columns' => ['title', 'content', 'date_start'], 'actions' => ['edit', 'destroy']])--}}
 

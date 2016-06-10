@@ -9,4 +9,9 @@ class Category extends BaseModel
 
     protected $fillable = ['title'];
 
+    public function announces()
+    {
+        return $this->hasMany('App\Models\Announces');
+    }
+
 }
