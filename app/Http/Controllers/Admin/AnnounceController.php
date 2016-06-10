@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Helpers\UploadFileHelper;
 use App\Http\Controllers\BaseController;
 use App\Models\Announce;
+use App\Models\Category;
 use App\Models\Media;
 use Input, Auth;
 
@@ -21,8 +22,12 @@ class AnnounceController extends BaseController
     {
         $announce = new Announce;
         $types = ['video' => 'Video' , 'music' => 'Music',  'partition' => 'Partitions'];
+        $categories =  Category::all()->map( function ($category) {
+            return array('id' => $category->id, 'title' => $category->title);
+        });
 
-        return view('admin.announce.edit', compact('announce', 'types'));
+
+        return view('admin.announce.edit', compact('announce', 'types', 'categories'));
     }
 
     public function store()
@@ -36,8 +41,12 @@ class AnnounceController extends BaseController
     public function edit($id)
     {
         $announce = Announce::findOrFail($id);
+        $categories =  Category::all()->map( function ($category) {
+            return array('id' => $category->id, 'title' => $category->title);
+        });
 
-        return view('admin.announce.edit', compact('announce'));
+
+        return view('admin.announce.edit', compact('announce', 'categories'));
     }
 
     public function update($id)

@@ -13,27 +13,33 @@
                 <li class="nav-item {{ Request::segments()[1] == 'users' ? 'active' : ''}}">
                     <a class="nav-link" href="{{ route('admin.users.index') }}">Utilisateurs</a>
                 </li>
-                <li class="nav-item {{ Request::segments()[1] == 'categories' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.categories.index') }}">Catégories</a>
-                </li>
+
                 <li class="nav-item {{ Request::segments()[1] == 'events' ? 'active' : ''}}">
                     <a class="nav-link" href="{{ route('admin.events.index') }}">Events</a>
                 </li>
-                <li class="nav-item {{ Request::segments()[1] == 'announces' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.announces.index') }}">Annonces</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Annonces</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ route('admin.categories.index') }}">Catégories</a>
+                        <a class="dropdown-item" href="{{ route('admin.announces.index') }}">Les annonces</a>
+                    </div>
                 </li>
+
                 <li class="nav-item {{ Request::segments()[1] == 'courses' ? 'active' : ''}}">
                     <a class="nav-link" href="{{ route('admin.courses.index') }}">Cours</a>
                 </li>
                 <li class="nav-item {{ Request::segments()[1] == 'medias' ? 'active' : ''}}">
                     <a class="nav-link" href="{{ route('admin.medias.index') }}">Média</a>
                 </li>
-                <li class="nav-item {{ Request::segments()[1] == 'forums' || Request::segments()[1] == 'posts' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.forums.index') }}">Forum</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Forum</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ route('admin.themes.index') }}">Thèmes</a>
+                        <a class="dropdown-item" href="{{ route('admin.forums.index') }}">Sujets</a>
+                    </div>
                 </li>
-                <li class="nav-item {{ Request::segments()[1] == 'themes' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.themes.index') }}">Thèmes</a>
-                </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
                     <div class="dropdown-menu">

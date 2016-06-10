@@ -125,7 +125,8 @@ return [
         'role' => 'Rôle',
         'date_start' => 'Date de début',
         'announce' => 'Annonce',
-        'theme' => 'Théme'
+        'theme' => 'Théme',
+        'categories' => 'Category'
      ],
 
 ];
