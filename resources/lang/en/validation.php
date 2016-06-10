@@ -124,7 +124,8 @@ return [
         'phone' => 'Numéro tel',
         'role' => 'Rôle',
         'date_start' => 'Date de début',
-        'announce' => 'Annonce'
+        'announce' => 'Annonce',
+        'theme' => 'Théme'
      ],
 
 ];

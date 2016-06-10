@@ -28,7 +28,7 @@
                 <li class="nav-item {{ Request::segments()[1] == 'medias' ? 'active' : ''}}">
                     <a class="nav-link" href="{{ route('admin.medias.index') }}">Média</a>
                 </li>
-                <li class="nav-item {{ Request::segments()[1] == 'forums' ? 'active' : ''}}">
+                <li class="nav-item {{ Request::segments()[1] == 'forums' || Request::segments()[1] == 'posts' ? 'active' : ''}}">
                     <a class="nav-link" href="{{ route('admin.forums.index') }}">Forum</a>
                 </li>
                 <li class="nav-item {{ Request::segments()[1] == 'themes' ? 'active' : ''}}">

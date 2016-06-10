@@ -46,6 +46,4 @@
 </table>
 
 
-<div class="pagination-container">
-    {!! $items->setPath($url)->appends(Input::all())->render() !!}
-</div>
+

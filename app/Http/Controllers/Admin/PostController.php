@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Helpers\UploadFileHelper;
 use App\Http\Controllers\BaseController;
 use App\Models\Post;
+use App\Models\Theme;
 use Input, Auth;
 
 class PostController extends BaseController
@@ -20,8 +21,11 @@ class PostController extends BaseController
     {
         $post = new Post;
         $types = ['pub' => 'pub' , 'clip' => 'clip', 'exp' => 'experimental', 'habillage' => 'habillage'];
+        $themes =  Theme::all()->map( function ($theme) {
+            return array('id' => $theme->id, 'title' => $theme->title);
+        });
 
-        return view('admin.post.edit', compact('post', 'types'));
+        return view('admin.post.edit', compact('post', 'types', 'themes'));
     }
 
     public function store()
@@ -47,8 +51,11 @@ class PostController extends BaseController
         $post = Post::findOrFail($id);
 
         $types = ['pub' => 'pub' , 'clip' => 'clip', 'exp' => 'experimental', 'habillage' => 'habillage'];
+        $themes =  Theme::all()->map( function ($theme) {
+            return array('id' => $theme->id, 'title' => $theme->title);
+        });
 
-        return view('admin.post.edit', compact('post', 'types'));
+        return view('admin.post.edit', compact('post', 'types', 'themes'));
     }
 
     public function update($id)

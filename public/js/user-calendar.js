@@ -76,6 +76,9 @@ function initCalendar(filters) {
         },
 
         dayClick: function(date, allDay, jsEvent, view) {
+
+                alert('Clicked on: ' + date.format());
+
         },
 
         eventDrop: function (event, delta, revertFunc) {
