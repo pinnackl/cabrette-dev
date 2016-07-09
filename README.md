@@ -14,6 +14,7 @@ Laravel 5 + MongoDB
 
 `git clone git@github.com:pinnackl/cabrette-dev.git` <br>
 `cd cabrette-dev` <br>
+`cp .env.example .env`<br>
 `composer install` <br>
 `npm install` <br>
 `npm install gulp` <br>
