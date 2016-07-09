@@ -4,7 +4,6 @@
     <title>Cabrettes et Cabrettaires</title>
     <meta charset ="utf-8">
     <meta name="description" content="">
-    <meta name="keywords"   content=" " >
     <meta name="robots"     content="index,follow " >
     <meta name="author"     content="PinnacklTeam" >
     <link rel="icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon"/>

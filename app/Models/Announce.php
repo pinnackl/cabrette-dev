@@ -13,6 +13,11 @@ class Announce extends BaseModel
         return $this->belongsTo('App\Models\Category', 'category_id');
     }
 
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'author');
+    }
+
     public function getImagesIdsAttribute($value)
     {
         return is_array($value) ? $value : array();
@@ -45,5 +50,8 @@ class Announce extends BaseModel
         }
         return Image::whereIn('_id', $ids);
     }
+
+
+
 
 }

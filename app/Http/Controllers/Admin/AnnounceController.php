@@ -33,6 +33,7 @@ class AnnounceController extends BaseController
     public function store()
     {
         $announce = new Announce(Input::all());
+        $announce->author = Auth::id();
         $announce->save();
 
         return redirect(route('admin.announces.index'));

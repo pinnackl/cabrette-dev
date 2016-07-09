@@ -50,4 +50,19 @@ $(function(){
         }
         $('.more-info').toggle();
     });
+
+
+
+
 });
+
+
+function fixFooter() {
+    if($('.wrapper').outerHeight() < (window.innerHeight - 90)) {
+        $('.footer').css('position', 'absolute');
+        $('.footer').css('bottom', '0');
+        $('.footer').css('width', 'calc(100% - 141px)');
+    } else {
+        $('.footer').css('position', 'static');
+    }
+}
