@@ -25,6 +25,11 @@ $jaune : #ffed00;
 $font-family-base: "DINCond-Light", sans-serif;
 $font-family-title: "DINCond-Bold", sans-serif;
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     padding-top: 30px;
     font-family: $font-family-title;

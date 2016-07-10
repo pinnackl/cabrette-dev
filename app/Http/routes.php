@@ -53,6 +53,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::resource('courses', 'CourseController');
 Route::resource('announces', 'AnnounceController');
+Route::resource('forum', 'ForumController');
 Route::get('association', ['as' => 'association', 'uses' => 'PageController@association']);
 Route::get('cabrette', ['as' => 'cabrette', 'uses' => 'PageController@cabrette']);
 Route::get('contact', ['as' => 'contact', 'uses' => 'PageController@contact']);

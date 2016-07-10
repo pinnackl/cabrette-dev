@@ -35,7 +35,7 @@
                 <a class="nav-link {{ $segment == 'courses' ? 'active' : ''}}" href="{{ route('courses.index') }}">Cours</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Forum</a>
+                <a class="nav-link" href="{{ route('forum.index') }}">Forum</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Agenda</a>

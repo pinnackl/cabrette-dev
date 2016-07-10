@@ -40,7 +40,7 @@ class AnnounceController extends BaseController
     {
         $announce = Announce::findOrFail($id);
         $categories =  Category::all()->lists('title', 'id');
-        
+
         return view('admin.announce.edit', compact('announce', 'categories'));
     }
 

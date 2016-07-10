@@ -13,7 +13,7 @@
                     @foreach($courses as $course)
                         <div class='post'>
                             <h3><a href="{{ route('courses.show', [$course]) }}">{{ $course->title }}</a></h3>
-                            <p>source</p>
+                            <p>{!! substr(Markdown::convertToHtml($course->content), 0, 400 ) !!}</p>
                         </div>
                     @endforeach
                 </div>
