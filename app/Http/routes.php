@@ -41,8 +41,9 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('pages.cabrette', ['as' => 'admin.pages.cabrette', 'uses' => 'PageController@cabrette']);
     });
 
-    Route::group(['middleware' => 'user', 'namespace' => 'User', 'prefix' => 'user'], function () {
-
+    Route::group(['middleware' => 'user'], function () {
+        Route::get('profile', 'UserController@edit');
+        Route::put('profile.update', 'UserController@update');
     });
 
 

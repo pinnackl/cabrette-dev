@@ -24,10 +24,6 @@ class LoginController extends BaseController
             return redirect()->intended(route('admin.users.index'));
         }
 
-        if (Auth::user()->isPartner()) {
-            return redirect()->intended(route('partner.users.index'));
-        }
-
         if (Auth::user()->isUser()) {
             return redirect()->intended('/');
         }
