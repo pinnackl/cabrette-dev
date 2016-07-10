@@ -5,7 +5,7 @@
     @include('partials.navbar')
 
     <div class="container">
-        <section class="content-section">
+        <section class="content-section" style="padding: 30px">
             <div class="row">
                 <h2>La {{ $post->title }}</h2>
 

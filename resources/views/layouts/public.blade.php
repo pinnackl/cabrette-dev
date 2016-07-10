@@ -20,7 +20,7 @@
     @yield('content')
 
 
-    <footer id="footer">
+    <footer class="footer">
         <div class="container">
             <ul>
                 <li>CGU</li> -
@@ -28,6 +28,5 @@
             </ul>
         </div>
     </footer>
-
 
 @stop

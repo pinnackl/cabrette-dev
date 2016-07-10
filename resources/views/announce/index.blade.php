@@ -4,17 +4,21 @@
 
     @include('partials.navbar')
 
+    @include('partials.breadcrumb', ['link_item_principal' => 'announces' , 'item_principal'=> 'Annonces', 'item' => '' ])
+
     <div class="container">
         <section class="content-section">
-            <div class="row">
-                <ul>
+            <div id='main'>
+                <div id='posts-list'>
                     @foreach($announces as $announce)
-                        <li>
-                            <a href="{{ route('announces.show', [$announce]) }}">{{ $announce->title }}</a>
-                        </li>
+                        <div class='post'>
+                            <h3><a href="{{ route('announces.show', [$announce]) }}">{{ $announce->title }}</a></h3>
+                            <p>source</p>
+                        </div>
                     @endforeach
-                </ul>
+                </div>
             </div>
         </section>
     </div>
+
 @stop
