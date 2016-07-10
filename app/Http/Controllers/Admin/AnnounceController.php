@@ -22,10 +22,7 @@ class AnnounceController extends BaseController
     {
         $announce = new Announce;
         $types = ['video' => 'Video' , 'music' => 'Music',  'partition' => 'Partitions'];
-        $categories =  Category::all()->map( function ($category) {
-            return array('id' => $category->id, 'title' => $category->title);
-        });
-
+        $categories =  Category::all()->lists('title', 'id');
 
         return view('admin.announce.edit', compact('announce', 'types', 'categories'));
     }
@@ -42,11 +39,8 @@ class AnnounceController extends BaseController
     public function edit($id)
     {
         $announce = Announce::findOrFail($id);
-        $categories =  Category::all()->map( function ($category) {
-            return array('id' => $category->id, 'title' => $category->title);
-        });
-
-
+        $categories =  Category::all()->lists('title', 'id');
+        
         return view('admin.announce.edit', compact('announce', 'categories'));
     }
 
