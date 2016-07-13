@@ -1,7 +1,6 @@
 <?php
 
 use App\Models\Course;
-use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Test\Factory;
 use Test\TestCase;
@@ -85,6 +84,5 @@ class CourseControllerTest extends TestCase {
 
         $this->assertEquals($countCourses - 1, Course::count());
     }
-
-
+    
 }
