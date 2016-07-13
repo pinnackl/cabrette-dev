@@ -4,7 +4,12 @@ namespace Test;
 
 use App\Models\User;
 use Illuminate\Contracts\Console\Kernel;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\ViewErrorBag;
+use \Mockery as m;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use PHPUnit_Framework_AssertionFailedError;
 
 class TestCase extends BaseTestCase
 {
@@ -29,25 +34,22 @@ class TestCase extends BaseTestCase
         return $app;
     }
 
-    public function setUp()
-    {
-        parent::setUp();
-
-        User::boot();
-    }
-
     public function assertRedirectedBack()
     {
         $this->assertRedirectedTo('/');
     }
 
-    public function createAdminUser()
+    protected function shouldRedirectBack($UrlReferer = '')
     {
-        return Factory::create(\App\Models\User::class, ['first_name' => 'Admin', 'role' => 'admin']);
-    }
+        $redirection = new RedirectResponse('http://localhost/' . $UrlReferer, 302, []);
+        $redirection->setRequest($request = m::mock('Illuminate\Http\Request'));
+        $redirection->setSession($session = m::mock('Illuminate\Session\Store'));
+        $request->shouldReceive('input')->andReturn([]);
+        $session->shouldReceive('flash');
+        $session->shouldReceive('flashInput');
+        $session->shouldReceive('get')->with('errors', m::any())->andReturn(new ViewErrorBag);
 
-    public function createUser()
-    {
-        return Factory::create(\App\Models\User::class, ['first_name' => 'User', 'role' => 'user']);
+        Redirect::shouldReceive('back')->andReturn($redirection);
+        Redirect::shouldReceive('to')->andThrow(new PHPUnit_Framework_AssertionFailedError("Should be redirected back but redirected to an other url"));
     }
 }

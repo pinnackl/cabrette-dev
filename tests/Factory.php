@@ -2,78 +2,38 @@
 
 namespace Test;
 
-use User;
+use App\Models\User;
 
 class Factory
 {
-    public static function create($model, $customParams = [])
+    public static function create($model, $customParams = array())
     {
         $object = self::build($model, $customParams);
         $object->save();
         return $object;
     }
 
-    /**
-     * @param $model
-     * @param array $customParams
-     * @return User|
-     */
-    public static function build($model, $customParams = [])
+    public static function build($model, $customParams = array())
     {
-        $faker = \Faker\Factory::create();
-
-        if (! str_contains($model, 'App\Models')) {
-            $model = 'App\Models\\'.$model;
-        }
-
         switch ($model) {
-            case 'App\Models\User':
-                $baseParams = ['email' => $faker->email, 'password' => 'abcdef'];
+            case 'admin':
+                $baseParams = array('first_name' => 'factory first name', 'last_name' => 'factory last name', 'email' => str_random(8).'@factory.com', 'password' => 'factorypassword', 'role' => 'admin');
+                $params = array_merge($baseParams, $customParams);
+                $user = new User($params);
+                $user->password = bcrypt($params['password']);
+                return $user;
 
-                $after = function ($user, $params) {
-                    $user->password = $params['password'];
-                    $user->save();
-                };
-
-                break;
-
-            case 'App\Models\Evaluation':
-                $baseParams = ['title' => 'factory title'];
-                break;
-
-            case 'App\Models\Activity':
-                $baseParams = ['back_office_title' => 'Factory BO Title', 'type' => 'text', 'title' => 'Factory Title'];
-                break;
-
-            case 'App\Models\Module':
-                $baseParams = ['back_office_title' => 'Factory BO Title', 'title' => 'Factory Title'];
-                break;
-
-            case 'App\Models\Course':
-                $baseParams = ['back_office_title' => 'Factory BO Title', 'title' => 'Factory Title'];
-                break;
-
-            case 'App\Models\CourseProgress':
-                $baseParams = ['course_id' => 'ID_COURSE'];
-                break;
-
-            case 'App\Models\Question':
-                $baseParams = ['order' => 1, 'answer' => true];
-                break;
-
-            default:
-                $baseParams = [];
+            case 'user':
+                $baseParams = array('first_name' => 'factory first name', 'last_name' => 'factory last name', 'email' => str_random(8).'@factory.com', 'password' => 'factorypassword', 'role' => 'user');
+                $params = array_merge($baseParams, $customParams);
+                $user = new User($params);
+                $user->password = bcrypt($params['password']);
+                return $user;
         }
 
-        $params = array_merge($baseParams, $customParams);
-        $object = new $model($params);
-
-        if (isset($after)) {
-            $after($object, $params);
-        }
-
-        return $object;
+        throw new Exception('No Factory found for "' . $model . '"');
     }
+
 }
 
 
