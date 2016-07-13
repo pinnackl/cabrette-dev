@@ -35,13 +35,13 @@
                 <a class="nav-link {{ $segment == 'courses' ? 'active' : ''}}" href="{{ route('courses.index') }}">Cours</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('forum.index') }}">Forum</a>
+                <a class="nav-link {{ $segment == 'forum' ? 'active' : ''}}" href="{{ route('forum.index') }}">Forum</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ $segment == 'agenda' ? 'active' : ''}}" href="{{ route('agenda.index') }}">Agenda</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" {{ $segment == 'contact' ? 'active' : ''}}" href="{{ route('contact') }}">Contact</a>
+                <a class="nav-link {{ $segment == 'contact' ? 'active' : ''}}" href="{{ route('contact') }}">Contact</a>
             </li>
 
             @if(Auth::user())
