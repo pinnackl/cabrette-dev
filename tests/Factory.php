@@ -2,6 +2,8 @@
 
 namespace Test;
 
+use App\Models\Course;
+use App\Models\Theme;
 use App\Models\User;
 
 class Factory
@@ -29,6 +31,18 @@ class Factory
                 $user = new User($params);
                 $user->password = bcrypt($params['password']);
                 return $user;
+
+            case 'course':
+                $baseParams = array('title' => 'factory title', 'last_name' => 'factory content');
+                $params = array_merge($baseParams, $customParams);
+                $course = new Course($params);
+                return $course;
+
+            case 'theme':
+                $baseParams = array('title' => 'factory title');
+                $params = array_merge($baseParams, $customParams);
+                $theme = new Theme($params);
+                return $theme;
         }
 
         throw new Exception('No Factory found for "' . $model . '"');
