@@ -84,5 +84,5 @@ class CourseControllerTest extends TestCase {
 
         $this->assertEquals($countCourses - 1, Course::count());
     }
-    
+
 }

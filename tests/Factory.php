@@ -3,6 +3,7 @@
 namespace Test;
 
 use App\Models\Course;
+use App\Models\Post;
 use App\Models\Theme;
 use App\Models\User;
 
@@ -43,6 +44,12 @@ class Factory
                 $params = array_merge($baseParams, $customParams);
                 $theme = new Theme($params);
                 return $theme;
+
+            case 'post':
+                $baseParams = array('title' => 'factory title', 'content' => 'factory content');
+                $params = array_merge($baseParams, $customParams);
+                $post = new Post($params);
+                return $post;
         }
 
         throw new Exception('No Factory found for "' . $model . '"');

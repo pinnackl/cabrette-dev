@@ -11,7 +11,6 @@ class ThemeControllerTest extends TestCase {
         parent::setUp();
         DB::table('theme')->delete();
 
-
         $this->admin = Factory::create('admin');
         $this->be($this->admin);
     }

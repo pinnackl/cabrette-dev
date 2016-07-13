@@ -50,8 +50,6 @@ class PostController extends BaseController
     public function edit($id)
     {
         $post = Post::findOrFail($id);
-
-        $types = ['pub' => 'pub' , 'clip' => 'clip', 'exp' => 'experimental', 'habillage' => 'habillage'];
         $themes =  Theme::all()->lists('title', 'id');
 
         return view('admin.post.edit', compact('post', 'types', 'themes'));
