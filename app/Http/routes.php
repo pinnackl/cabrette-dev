@@ -37,6 +37,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('themes', 'ThemeController');
         Route::resource('pages', 'PageController');
 
+        Route::get('events-all', ['as' => 'event-all', 'uses' => 'EventController@all']);
+
         Route::get('pages.association', ['as' => 'admin.pages.association', 'uses' => 'PageController@association']);
         Route::get('pages.cabrette', ['as' => 'admin.pages.cabrette', 'uses' => 'PageController@cabrette']);
     });

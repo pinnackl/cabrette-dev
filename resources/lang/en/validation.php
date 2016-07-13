@@ -129,7 +129,8 @@ return [
         'categories' => 'Category',
         'last_password' => 'Ancien mot de passe',
         'new_password' => 'Nouveau mot de passe',
-        'confirm_new_password' => 'Confirmation du nouveau mot de passe'
+        'confirm_new_password' => 'Confirmation du nouveau mot de passe',
+        'address' => 'Adresse'
      ],
 
 ];

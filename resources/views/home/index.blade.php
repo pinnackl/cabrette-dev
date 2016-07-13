@@ -42,6 +42,11 @@
     <section class="content-home">
       <div class="event-block col-md-3 ">
         <h2>Event</h2>
+        @if($event)
+          <p>
+            {{ $event->title  }}
+          </p>
+        @endif
       </div>
 
       <div class="right-block">
