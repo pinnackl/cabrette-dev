@@ -1,5 +1,7 @@
 <?php
 use App\Models\User;
+use Test\TestCase;
+
 class UserTest extends TestCase
 {
     public function setUp()
@@ -23,6 +25,7 @@ class UserTest extends TestCase
     {
         User::create(['email' => 'bob']);
     }
+
     /**
      * @expectedException        Starter\ModelValidation\ModelInvalidException
      * @expectedExceptionMessage email: Required

@@ -45,13 +45,12 @@ class UserControllerTest extends TestCase {
             'password' => 'password',
         ];
 
-
         $this->call('POST', 'admin/users', $inputs);
 
         $this->assertEquals($countUsers + 1, User::count());
         $this->assertRedirectedTo('admin/users');
     }
-    
+
     public function testEdit()
     {
         $user = Factory::create('user');
@@ -61,7 +60,6 @@ class UserControllerTest extends TestCase {
         $this->assertResponseOk();
         $this->assertViewHas('user');
     }
-
 
     public function testUpdate()
     {
