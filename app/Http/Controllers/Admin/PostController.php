@@ -20,7 +20,6 @@ class PostController extends BaseController
     public function create()
     {
         $post = new Post;
-        $types = ['pub' => 'pub' , 'clip' => 'clip', 'exp' => 'experimental', 'habillage' => 'habillage'];
         $themes =  Theme::all()->lists('title', 'id');
 
         return view('admin.post.edit', compact('post', 'types', 'themes'));
@@ -30,6 +29,10 @@ class PostController extends BaseController
     {
         $post = new Post(Input::all());
         $post->author = Auth::id();
+
+        if(Input::get('theme')) {
+            $post->theme_id = Input::get('theme');
+        }
 
         if(Input::file()) {
 
@@ -59,6 +62,10 @@ class PostController extends BaseController
         $post = Post::findOrFail($id);
 
         $post->fill(Input::all());
+
+        if(Input::get('theme')) {
+            $post->theme_id = Input::get('theme');
+        }
 
         if(Input::file()) {
             if (Input::file('cover')) {

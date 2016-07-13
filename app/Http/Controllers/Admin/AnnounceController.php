@@ -31,6 +31,9 @@ class AnnounceController extends BaseController
     {
         $announce = new Announce(Input::all());
         $announce->author = Auth::id();
+        if(Input::get('categories')) {
+            $announce->category_id = Input::get('categories');
+        }
         $announce->save();
 
         return redirect(route('admin.announces.index'));
@@ -49,6 +52,9 @@ class AnnounceController extends BaseController
         $announce = Announce::findOrFail($id);
 
         $announce->fill(Input::all());
+        if(Input::get('categories')) {
+            $announce->category_id = Input::get('categories');
+        }
 
         $announce->save();
 
