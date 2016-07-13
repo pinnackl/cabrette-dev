@@ -11,9 +11,6 @@
                     <a class="nav-link" href="#">Bonjour {{ Auth::user()->full_name }} </a>
                 </li>
             @endif
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Actualités <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link {{ $segment == 'association' ? 'active' : ''}}" href="{{ route('association') }}">L'association</a>
             </li>
