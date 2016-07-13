@@ -22,8 +22,11 @@ class EventController extends BaseController
         $event = new Event(Input::all());
         $event->date_start = new Carbon(Input::get('date_start'));
         if (!Input::get('date_end')) {
+            $event->date_end = new Carbon(Input::get('date_start'));
+        } else {
             $event->date_end = new Carbon(Input::get('date_end'));
         }
+
         if(Input::file()) {
 
             if (Input::file('cover_event')) {

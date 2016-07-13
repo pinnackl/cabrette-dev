@@ -52,6 +52,9 @@ $(function(){
     });
 
 
+    $('.radio-date').change(function () {
+        $('.date-end').toggle();
+    });
 
 
 });

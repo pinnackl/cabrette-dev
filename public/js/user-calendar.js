@@ -30,14 +30,10 @@ function initCalendar(filters) {
                     params.push(key+"="+filters[key]);
                 }
                 $.get($calendarInfo.data('fetch-url') + '?' + params.join('&'), function (data) {
-                    console.log(data)
                     var events = [];
 
                     for (var index in data.eventsUser) {
-                        console.log('even');
-
                         var event = data.eventsUser[index];
-                        console.log(event);
                         events.push({
                             id: event._id,
                             title:  event.title,

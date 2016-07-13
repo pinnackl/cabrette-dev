@@ -28,9 +28,20 @@
                             {!! Form::bsText('title') !!}
                             {!! Form::bsText('address', null, ['placeholder' => 'Paris, france']) !!}
 
+                            <div class="form-group" style="margin-left: 26%">
+                                <label for="">Date unique</label>
+                                <input type="radio" name="type_date" class="radio-date" value="0" checked>
+                                <label for="">Periode </label>
+                                <input type="radio" name="type_date" class="radio-date"value="1">
+                            </div>
+
                             <div class="form-group">
                                 <label for="" style="width: 26%;display: inline-block">Date de l'évènement</label>
                                 {!! Form::date('date_start', null, ['class' => 'form-control', 'style' => 'width:73%;display:inline-block']) !!}
+                            </div>
+                            <div class="form-group date-end" style="display: none">
+                                <label for="" style="width: 26%;display: inline-block">Date de fin</label>
+                                {!! Form::date('date_end', null, ['class' => 'form-control', 'style' => 'width:73%;display:inline-block']) !!}
                             </div>
 
                             {!! Form::bsTextarea('content') !!}
