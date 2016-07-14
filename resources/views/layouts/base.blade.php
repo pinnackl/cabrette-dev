@@ -17,7 +17,7 @@
 
     @yield('base_stylesheet')
 </head>
-<body>
+<body class="body-img">
 
     @yield('base_content')
 

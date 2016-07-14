@@ -4,6 +4,8 @@
 
     @include('partials.navbar')
 
+    @include('partials.breadcrumb', ['link_item_principal' => 'courses' , 'item_principal'=> 'Cours', 'item' => $course ])
+
     <div class="container">
         <section class="content-section">
             <div class="row">

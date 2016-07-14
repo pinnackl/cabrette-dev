@@ -27,19 +27,11 @@ class ForumController extends BaseController
         return view('admin.forum.edit', compact('announce', 'types'));
     }
 
-    public function store()
+    public function show($id)
     {
-        $announce = new Post(Input::all());
-        $announce->save();
+        $theme = Theme::findOrFail($id);
 
-        return redirect(route('admin.forums.index'));
-    }
-
-    public function edit($id)
-    {
-        $announce = Post::findOrFail($id);
-
-        return view('admin.forum.edit', compact('announce'));
+        return view('forum.show', compact('theme'));
     }
 
     public function update($id)

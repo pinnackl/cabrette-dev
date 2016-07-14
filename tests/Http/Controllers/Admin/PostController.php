@@ -1,7 +1,6 @@
 <?php
 
 use App\Models\Post;
-use App\Models\Theme;
 use Illuminate\Support\Facades\DB;
 use Test\Factory;
 use Test\TestCase;
