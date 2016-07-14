@@ -14,7 +14,7 @@
         <div class="vertical-menu">
             <ul class="form">
                 <li><a class="profile" href="{{ url('profile') }}"><i class="icon-user"></i>Edit Profile</a></li>
-                <li><a class="messages" href="#"><i class="icon-envelope-alt"></i>Proposer un article</a></li>
+                <li><a class="messages" href="{{ route('posts.create') }}"><i class="icon-envelope-alt"></i>Proposer un article</a></li>
             </ul>
         </div>
     @endif
