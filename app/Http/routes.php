@@ -58,6 +58,7 @@ Route::resource('courses', 'CourseController');
 Route::resource('announces', 'AnnounceController');
 Route::resource('forum', 'ForumController');
 Route::resource('posts', 'PostController');
+Route::resource('comments', 'CommentController');
 Route::get('forum/{theme_id}/subject/{post_id}', ['as' => 'forum.subject.show', 'uses' =>  'ForumSubjectController@show']);
 Route::get('association', ['as' => 'association', 'uses' => 'PageController@association']);
 Route::get('cabrette', ['as' => 'cabrette', 'uses' => 'PageController@cabrette']);

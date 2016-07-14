@@ -15,14 +15,24 @@
                         <p> {!! Markdown::convertToHtml($post->content)  !!}</p>
                     </div>
                 </div>
+
                 @if(Auth::user())
                     <div class="block-comment">
-                        {!! Form::open() !!}
-                            {!! Form::bsTextarea('comment') !!}
+                        {!! Form::open(['route' => ['comments.store'] , 'method' => 'POST ']) !!}
+                            {!! Form::hidden('post_id', $post->id) !!}
+                            {!! Form::bsTextarea('content') !!}
                             {!! Form::bsButton('Enregistrer') !!}
                         {!! Form::close() !!}
                     </div>
                 @endif
+
+                <div>
+                    @foreach($post->comments as $comment)
+                        <p>{{ $comment->content }} <br>
+                            <small>par {{ $comment->user->full_name }}</small>
+                        </p>
+                    @endforeach
+                </div>
             </div>
         </section>
     </div>
