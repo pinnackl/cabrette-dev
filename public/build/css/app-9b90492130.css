@@ -199,6 +199,7 @@ header a:hover {
 }
 
 #main #posts-list .post {
+  position: relative;
   background: white;
   padding: 20px 10px;
   margin-bottom: 10px;
