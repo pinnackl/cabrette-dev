@@ -12,8 +12,8 @@
                 <div id='posts-list'>
                     @foreach($theme->posts as $post)
                         <div class='post'>
-                            <h3><a href="{{ url('forum/'.$theme->id.'/subject/'.$post->id) }}">{{ $post->title }}</a></h3>
-                            <p> {!! substr(Markdown::convertToHtml($post->content), 0 , 400)  !!}</p>
+                            <h3>{{ $post->title }}</h3>
+                            <p> {!! substr(Markdown::convertToHtml($post->content), 0 , 400)  !!} ... <a href="{{ url('forum/'.$theme->id.'/subject/'.$post->id) }}">Voir plus</a></p>
                         </div>
                     @endforeach
                 </div>

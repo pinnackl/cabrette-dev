@@ -223,3 +223,7 @@ header a:hover {
 .body-img {
   background-color: #eee;
 }
+
+.row h2 {
+  padding: 0.75rem 1rem;
+}

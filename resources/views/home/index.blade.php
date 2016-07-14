@@ -82,12 +82,6 @@
           </ul>
         </div>
 
-        <div class="col-md-4">
-          <h2>Calendrier</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cumque delectus doloremque, dolores eius, est in labore modi praesentium quas reiciendis saepe voluptate, voluptatem. Aut blanditiis consectetur fuga nihil repellendus.
-          </p>
-        </div>
       </div>
     </section>
   </div>

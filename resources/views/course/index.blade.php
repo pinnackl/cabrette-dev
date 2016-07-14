@@ -4,16 +4,14 @@
 
     @include('partials.navbar')
 
-    @include('partials.breadcrumb', ['link_item_principal' => 'courses' , 'item_principal'=> 'Cours', 'item' => '' ])
-
     <div class="container">
         <section class="content-section">
             <div id='main'>
                 <div id='posts-list'>
                     @foreach($courses as $course)
                         <div class='post'>
-                            <h3><a href="{{ route('courses.show', [$course]) }}">{{ $course->title }}</a></h3>
-                            <p>{!! substr(Markdown::convertToHtml($course->content), 0, 400 ) !!}</p>
+                            <h3>{{ $course->title }}</h3>
+                            <p>{!! substr(Markdown::convertToHtml($course->content), 0, 400 ) !!} ... <a href="{{ route('courses.show', [$course]) }}"> Voir plus</a></p>
                         </div>
                     @endforeach
                 </div>

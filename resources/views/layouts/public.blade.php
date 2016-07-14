@@ -23,7 +23,7 @@
     @yield('content')
 
 
-    <footer class="footer">
+    <footer class="footer" style="text-align: center">
         <div class="container">
             <ul>
                 <li>CGU</li> -

@@ -4,8 +4,6 @@
 
     @include('partials.navbar')
 
-    @include('partials.breadcrumb', ['link_item_principal' => 'forum' , 'item_principal'=> 'Forum', 'item' => '' ])
-
     <div class="container">
         <section class="content-section">
             <div id='main'>
