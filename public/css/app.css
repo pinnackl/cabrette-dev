@@ -250,3 +250,7 @@ header a:hover {
   outline: none;
   border: 0;
 }
+
+table {
+  min-height: 400px;
+}

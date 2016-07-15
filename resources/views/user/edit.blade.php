@@ -7,7 +7,7 @@
     @include('partials.breadcrumb', ['link_item_principal' => 'profile' , 'item_principal'=> 'Edition Profil ', 'item' => '' ])
 
     <div class="container">
-        <div class="row">
+        <div class="row" style="min-height: 450px">
             <div class="col-md-6">
 
                 <legend>Modifier les informations</legend>
