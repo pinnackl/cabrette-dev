@@ -6,7 +6,7 @@
     @include('partials.navbar')
 
     <div class="container">
-        <div class="row" style="min-height: 500px">
+        <div class="row" style="min-height: 520px">
             <div class="cart cart-custom">
                 <div class="card-header">Réinitialisation du mot de passe</div>
                 <div class="cart-block">

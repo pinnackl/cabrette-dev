@@ -4,11 +4,10 @@
 
     @include('partials.navbar')
 
-
     <div class="container">
         <div class="row">
-            <div class="cart cart-custom">
-                <div class="cart-header">Réinitialisation du mot de passe</div>
+            <div class="cart cart-custom" style="min-height: 500px">
+                <div class="cart-header" style="border-radius: 0.1875rem 0.1875rem 0 0;padding: 0.75rem 1.25rem;background-color: #f5f5f5;border-bottom: 0.0625rem solid #e5e5e5;">Réinitialisation du mot de passe</div>
 
                 <div class="cart-block">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/password/reset') }}">
