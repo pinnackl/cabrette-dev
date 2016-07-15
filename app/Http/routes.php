@@ -17,6 +17,16 @@ Route::get('signup', ['as' => 'signup.index', 'uses' => 'LoginUserController@sig
 Route::post('signup', ['as' => 'signup.store', 'uses' => 'LoginUserController@store']);
 Route::post('admin', ['as' => 'login.store', 'uses' => 'LoginController@store']);
 
+// Password reset link request routes...
+Route::get('password/email', 'Auth\PasswordController@getEmail');
+Route::post('password/email', 'Auth\PasswordController@postEmail');
+
+// Password reset routes...
+Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+Route::post('password/reset', 'Auth\PasswordController@postReset');
+Route::get('password/reset', 'Auth\PasswordController@getEmail');
+
+
 Route::get('logout', ['as' => 'login.destroy', 'uses' => 'LoginController@destroy']);
 
 Route::get('/', ['as' => '/', 'uses' => 'HomeController@index']);

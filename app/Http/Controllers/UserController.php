@@ -24,7 +24,12 @@ class UserController extends BaseController
 
         $user->fill(Input::all());
 
-        $user->save();
+        if (Input::get('new_password') == Input::get('confirm_new_password')) {
+            $user->password = Input::get('confirm_new_password');
+            $user->save();
+        } else {
+            return redirect()->back()->withErrors('Les deux mots de passes ne sont pas identiques');
+        }
 
         return back()->with('info', 'Modifications bien enregistrées.');
     }

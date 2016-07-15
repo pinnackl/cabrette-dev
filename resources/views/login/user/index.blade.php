@@ -14,6 +14,11 @@
                     {!! Form::bsButton('Envoyer') !!}
                     {!! Form::close() !!}
                 </div>
+                <div class="form-group">
+                    <div class="col-md-6 col-md-offset-4">
+                        <a class="btn btn-link" style="padding-left: 0;" href="{{ url('/password/reset') }}">Vous avez oublié votre mot de passe ?</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

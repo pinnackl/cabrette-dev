@@ -29,6 +29,6 @@ class Kernel extends HttpKernel
         'auth' => Middleware\Authenticate::class,
         'admin' => Middleware\Admin::class,
         'user' => Middleware\User::class,
-        'partner' => Middleware\Partner::class,
+        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
     ];
 }
