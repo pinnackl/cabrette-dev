@@ -49,6 +49,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::resource('comments', 'CommentController');
         Route::resource('posts', 'PostController');
+        Route::resource('annonces', 'AnnonceController');
     });
 
 

@@ -10,7 +10,7 @@ class AnnounceController extends BaseController
 {
     public function index()
     {
-        $announces = Announce::paginate(20);
+        $announces = Announce::orderBy('created_at', 'esc')->paginate(20);
 
         return view('announce.index', compact('announces'));
     }
