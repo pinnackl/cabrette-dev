@@ -10,7 +10,7 @@
                 <legend>Créer un article</legend>
                 {!! Form::model($post, ['route' => $post->exists ? ['posts.update', $post] : ['posts.store'] , 'method' => $post->exists ?  'PUT' : 'POST ', 'files' => true]) !!}
                 {!! Form::bsText('title') !!}
-                {!! Form::bsSelect('theme', $themes) !!}
+                {!! Form::bsSelect('theme', $themes,  $post->theme != null ? $post->theme->id : null) !!}
                 {!! Form::bsTextarea('content', null, ['style' => 'min-height:260px']) !!}
                 <div class="form-group">
                     <label for="" style="width: 25%;display: inline-block">Image de fond (taille: 1500 * 800 ): </label>

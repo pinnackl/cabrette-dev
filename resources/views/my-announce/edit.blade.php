@@ -7,10 +7,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <legend>Créer une annonce</legend>
-                {!! Form::model($announce, ['route' => ['annonces.update', $announce], 'method' => $announce->exist ? 'PUT' : 'POST', 'files' => true]) !!}
+                <legend> {{ $announce->id ? 'Modifier l\'annonce' : 'Créer une annonce' }}</legend>
+                {!! Form::model($announce, ['route' => $announce->id ? ['annonces.update', $announce] : ['annonces.store'], 'method' => $announce->exist ? 'PUT' : 'POST']) !!}
                 {!! Form::bsText('title') !!}
-                {!! Form::bsSelect('categories', $categories) !!}
+                {!! Form::bsSelect('categories', $categories, $announce->category != null ? $announce->category->id : null) !!}
                 {!! Form::bsTextarea('content', null, ['style' => 'min-height:300px']) !!}
                 {!! Form::bsButton('Enregistrer') !!}
                 {!! Form::close() !!}

@@ -56,3 +56,25 @@
         </ul>
     </div>
 </nav>
+
+
+@if (Session::get('info'))
+    <div class="alert alert-success fade in" style="text-align: center">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            &times;
+        </button>
+        <i class="fa fa-info-circle"></i> {!! Session::get('info') !!}
+    </div>
+@endif
+
+@if ($errors->any())
+    <div class="alert alert-danger fade in" style="text-align: center">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            &times;
+        </button>
+        <i class="fa fa-info-warning"></i>
+        @foreach($errors->all() as $error)
+            {!! $error !!}
+        @endforeach
+    </div>
+@endif
