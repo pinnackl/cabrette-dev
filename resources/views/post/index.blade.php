@@ -7,7 +7,7 @@
     @include('partials.breadcrumb', ['link_item_principal' => 'articles' , 'item_principal'=> 'Mes articles', 'item' => '' ])
 
     <div class="container">
-        <a class="pull-right" href="{{ route('posts.create') }}"><i class="fa fa-plus"></i>Créer un article</a>
+        <a class="pull-right" href="{{ route('posts.create') }}"><i class="fa fa-plus"></i> Créer un article</a>
         <table class="table table-striped">
             <thead>
                 <tr>
