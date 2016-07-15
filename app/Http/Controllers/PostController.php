@@ -12,7 +12,7 @@ class PostController extends BaseController
 {
     public function index()
     {
-        $posts = Post::paginate(20);
+        $posts = Post::where('author', Auth::id())->get();
 
         return view('post.index', compact('posts'));
     }

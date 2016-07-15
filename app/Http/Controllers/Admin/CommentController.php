@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\BaseController;
 use App\Models\Comment;
@@ -8,14 +8,11 @@ use Input, Auth;
 
 class CommentController extends BaseController
 {
-    public function store()
+    public function index()
     {
-        $comment = New Comment(Input::all());
-        $comment->author = Auth::id();
-        $comment->state = true;
-        $comment->save();
+        $comments = Comment::paginate(20);
 
-        return redirect()->back()->with('success', 'Commentaire bien enregistré');
+        return view('admin.comment.index', compact('comments'));
     }
 
     public function update($id)
@@ -26,6 +23,11 @@ class CommentController extends BaseController
         $comment->save();
 
         return redirect()->back()->with('success', 'Commentaire signalé');
+    }
+
+    public function destroy($id)
+    {
+
     }
 
 }

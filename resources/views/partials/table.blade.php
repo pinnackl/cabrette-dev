@@ -16,7 +16,14 @@
         @foreach($items as $item)
             <tr>
                 @foreach($columns as $column)
-                    <td>{{ $item->$column }}</td>
+                    @if($column == 'state' && $item->state == true)
+                        <td>Non signalé</td>
+                    @elseif($column == 'state' && $item->state == '')
+                        <td>Signalé</td>
+                    @else
+                        <td>{{ $item->$column }}</td>
+                    @endif
+
                 @endforeach
 
                 <td class="action-cell">

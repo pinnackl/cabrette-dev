@@ -11,12 +11,13 @@
 
 
     @if(Auth::user())
-        <div class="vertical-menu">
-            <ul class="form">
-                <li><a class="profile" href="{{ url('profile') }}"><i class="icon-user"></i>Edit Profile</a></li>
-                <li><a class="messages" href="{{ route('posts.create') }}"><i class="icon-envelope-alt"></i>Proposer un article</a></li>
+        <nav class="vertical-menu">
+            <ul class="nav navbar-nav">
+                <li><a class="profile" href="{{ url('profile') }}"><i class="fa fa-user"></i> Mon Profil</a></li>
+                <li><a class="" href="{{ route('posts.index') }}"><i class="fa fa-list"></i> Mes articles</a></li>
+                <li><a class="" href="{{ route('posts.create') }}"><i class="fa fa-plus"></i> Propser un article</a></li>
             </ul>
-        </div>
+        </nav>
     @endif
 
 

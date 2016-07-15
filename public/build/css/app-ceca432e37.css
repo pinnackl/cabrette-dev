@@ -106,18 +106,13 @@ header a:hover {
   position: absolute;
   top: 0;
   left: 0;
+  background-color: white;
+  width: 160px;
+  padding: 20px;
 }
 
-.vertical-menu ul.form {
-  position: relative;
-  background: #fff;
-  width: 250px;
-  margin: auto;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  border-radius: 5px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+.vertical-menu ul li i {
+  width: 20px;
 }
 
 .vertical-menu .form li a {
@@ -227,4 +222,31 @@ header a:hover {
 
 .row h2 {
   padding: 0.75rem 1rem;
+}
+
+.comment-block {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  background-color: white;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.block-post-comment {
+  width: 80%;
+  margin: auto;
+}
+
+.block-signal-comment {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.block-signal-comment button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
 }

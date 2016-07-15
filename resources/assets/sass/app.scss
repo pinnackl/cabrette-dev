@@ -122,24 +122,18 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    background-color: white;
+    width: 160px;
+    padding: 20px;
 
 
-    ul.form {
-        position:relative;
-        background:#fff;
-        width:250px;
-        margin:auto;
-        padding:0;
-        list-style: none;
-        overflow:hidden;
+    ul{
 
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-
-        -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-        -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-        box-shadow:  1px 1px 10px rgba(0, 0, 0, 0.1);
+        li {
+            i {
+                width: 20px;
+            }
+        }
     }
 
     .form li a {
@@ -271,4 +265,30 @@ header {
     h2 {
         padding: 0.75rem 1rem;
     }
+}
+
+.comment-block {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.block-post-comment {
+    width: 80%;
+    margin: auto;
+}
+
+.block-signal-comment {
+    position: absolute;
+    top : 5px;
+    right: 5px;
+     button {
+         background-color: transparent;
+         outline: none;
+         border:0;
+     }
 }

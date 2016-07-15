@@ -15,10 +15,29 @@
                         <p> {!! Markdown::convertToHtml($post->content)  !!}</p>
                     </div>
                 </div>
+                <div >
+                    @foreach($post->comments as $comment)
+                        <div class="comment-block">
+                            <div class="block-signal-comment">
+                                {!! Form::open(['route' => ['comments.update', $comment] , 'method' => 'PUT']) !!}
+                                    {!! Form::hidden('post_id', $post->id) !!}
+                                    {!! Form::hidden('state', false) !!}
+                                    <button type="submit" onClick="return confirm('Êtes-vous sûr de vouloir signaler ce commentaire ?');">
+                                        <i class="fa fa-exclamation-triangle"></i>
+                                    </button>
+                                {!! Form::close() !!}
+                            </div>
+                            <p>
+                                {{ $comment->content }}
+                            </p>
+                            <small style="position:absolute;right: 5px;bottom: 5px;">par {{ $comment->user->full_name }}</small>
+                        </div>
+                    @endforeach
+                </div>
 
                 @if(Auth::user())
-                    <div class="block-comment">
-                        {!! Form::open(['route' => ['comments.store'] , 'method' => 'POST ']) !!}
+                    <div class="block-post-comment">
+                        {!! Form::open(['route' => ['comments.store'] , 'method' => 'POST']) !!}
                             {!! Form::hidden('post_id', $post->id) !!}
                             {!! Form::bsTextarea('content') !!}
                             {!! Form::bsButton('Enregistrer') !!}
@@ -26,13 +45,7 @@
                     </div>
                 @endif
 
-                <div>
-                    @foreach($post->comments as $comment)
-                        <p>{{ $comment->content }} <br>
-                            <small>par {{ $comment->user->full_name }}</small>
-                        </p>
-                    @endforeach
-                </div>
+
             </div>
         </section>
     </div>

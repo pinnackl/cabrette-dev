@@ -132,6 +132,7 @@ return [
         'confirm_new_password' => 'Confirmation du nouveau mot de passe',
         'address' => 'Adresse',
         'comment' => 'Commentaire',
+        'state' => 'Etat',
      ],
 
 ];

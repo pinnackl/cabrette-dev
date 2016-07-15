@@ -37,6 +37,7 @@
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{{ route('admin.themes.index') }}">Thèmes</a>
                         <a class="dropdown-item" href="{{ route('admin.forums.index') }}">Sujets</a>
+                        <a class="dropdown-item" href="{{ route('admin.comments.index') }}">Commentaires</a>
                     </div>
                 </li>
 

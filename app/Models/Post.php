@@ -23,6 +23,6 @@ class Post extends BaseModel
 
     public function comments()
     {
-        return $this->hasMany('App\Models\Comment');
+        return $this->hasMany('App\Models\Comment')->where('state', true);
     }
 }

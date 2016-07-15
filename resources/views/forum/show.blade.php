@@ -15,7 +15,7 @@
                             <h3>{{ $post->title }}</h3>
                             <p> {!! substr(Markdown::convertToHtml($post->content), 0 , 400)  !!} ... <a href="{{ url('forum/'.$theme->id.'/subject/'.$post->id) }}">Voir plus</a></p>
                             <div style="position: absolute;right: 5px; bottom: 5px">
-                                <small>Publié le {{ $post->created_at }}  par {{ $post->user->full_name }}</small>
+                                <small>Publié le {{ $post->created_at->format('d/m/Y à h:i') }}  par {{ $post->user->full_name }}</small>
                             </div>
                         </div>
                     @endforeach
