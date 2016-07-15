@@ -251,6 +251,6 @@ header a:hover {
   border: 0;
 }
 
-table {
+.table {
   min-height: 400px;
 }
