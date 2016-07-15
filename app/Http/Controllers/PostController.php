@@ -52,7 +52,7 @@ class PostController extends BaseController
         $post = Post::findOrFail($id);
         $themes =  Theme::all()->lists('title', 'id');
 
-        return view('admin.post.edit', compact('post', 'types', 'themes'));
+        return view('post.edit', compact('post', 'themes'));
     }
 
     public function update($id)
@@ -82,6 +82,6 @@ class PostController extends BaseController
         $post = Post::findOrFail($id);
         $post->delete();
 
-        return redirect(route('admin.posts.index'));
+        return redirect(route('posts.index'));
     }
 }

@@ -12,6 +12,7 @@
                 <tr>
                     <th>#</th>
                     <th>Titre</th>
+                    <th class="pull-right">Editer / supprimer</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,6 +20,17 @@
                     <tr>
                         <td>{{ $key +1 }}</td>
                         <td>{{ $post->title }}</td>
+                        <td class="action-cell pull-right">
+                            <a href="{{ 'posts/'.$post->id.'/edit' }}" class="btn btn-sm btn-link" title="Éditer">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+
+                            {!! Form::open(['url' => 'posts/'.$post->id, 'method' => 'DELETE']) !!}
+                            <button type="submit" class="btn btn-sm btn-link" title="Supprimer" onClick="return confirm('Êtes-vous sûr de vouloir supprimer cet élément ?');">
+                                <i class="fa fa-trash-o"></i>
+                            </button>
+                            {!! Form::close() !!}
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

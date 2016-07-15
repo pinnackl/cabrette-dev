@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div >
-                    @foreach($post->comments as $comment)
+                    @foreach($post->comments()->orderBy('created_at', 'desc')->get() as $comment)
                         <div class="comment-block">
                             <div class="block-signal-comment">
                                 {!! Form::open(['route' => ['comments.update', $comment] , 'method' => 'PUT']) !!}
@@ -30,7 +30,7 @@
                             <p>
                                 {{ $comment->content }}
                             </p>
-                            <small style="position:absolute;right: 5px;bottom: 5px;">par {{ $comment->user->full_name }}</small>
+                            <small style="position:absolute;right: 5px;bottom: 5px;">Commenté il y à {{ $comment->created_at->diffForHumans() }} par {{ $comment->user->full_name }}</small>
                         </div>
                     @endforeach
                 </div>

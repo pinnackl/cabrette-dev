@@ -15,7 +15,7 @@
             <ul class="nav navbar-nav">
                 <li><a class="profile" href="{{ url('profile') }}"><i class="fa fa-user"></i> Mon Profil</a></li>
                 <li><a class="" href="{{ route('posts.index') }}"><i class="fa fa-list"></i> Mes articles</a></li>
-                <li><a class="" href="{{ route('posts.create') }}"><i class="fa fa-plus"></i> Propser un article</a></li>
+                <li><a class="" href="{{ route('posts.create') }}"><i class="fa fa-plus"></i> Proposer un article</a></li>
             </ul>
         </nav>
     @endif
