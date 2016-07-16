@@ -3,7 +3,7 @@
 @section('content')
 
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.medias.index') }}">Categories</a></li>
+        <li><a href="{{ route('admin.medias.index') }}">Média</a></li>
         <li class="active">{{ $media->exists ? 'Modifier le media' : 'Nouveau media' }}</li>
     </ol>
 

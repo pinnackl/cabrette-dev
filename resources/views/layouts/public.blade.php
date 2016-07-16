@@ -33,4 +33,10 @@
         </div>
     </footer>
 
+
+    <script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'content' );
+    </script>
+
 @stop

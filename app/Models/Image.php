@@ -7,7 +7,7 @@ class Image extends BaseModel {
     protected $table = 'images';
     public $uploadFolder = 'images';
 
-    protected $fillable = ['image_filename', 'announce_id', 'user_id'];
+    protected $fillable = ['image_filename', 'user_id', 'order', 'home'];
 
     public function user() { return $this->belongsTo('App\Models\User', 'user_id'); }
 

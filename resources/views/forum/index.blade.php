@@ -4,7 +4,7 @@
 
     @include('partials.navbar')
 
-    <div class="container" style="padding-top: 10px">
+    <div class="container" style="padding-top: 20px">
         @foreach($posts as $post)
             <div class="blog-card">
                 <div class="photo" style="background: url({{ asset('uploads/posts/'.$post->cover_filename) }}) center no-repeat;background-size: cover;"></div>

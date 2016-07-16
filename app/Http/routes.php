@@ -45,6 +45,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('themes', 'ThemeController');
         Route::resource('pages', 'PageController');
         Route::resource('comments', 'CommentController');
+        Route::resource('images', 'HomeImageController');
 
 
         Route::get('pages.association', ['as' => 'admin.pages.association', 'uses' => 'PageController@association']);

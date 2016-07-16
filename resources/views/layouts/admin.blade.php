@@ -48,6 +48,10 @@
                         <a class="dropdown-item" href="{{ route('admin.pages.cabrette') }}">La cabrette</a>
                     </div>
                 </li>
+
+                <li class="nav-item {{ Request::segments()[1] == 'images' ? 'active' : ''}}">
+                    <a class="nav-link" href="{{ route('admin.images.index') }}"> <i class="fa fa-youtube-play"></i> Home Images slider</a>
+                </li>
             </ul>
             <ul class="nav navbar-nav pull-right">
                 <li class="nav-item" style="margin-right:10px">
