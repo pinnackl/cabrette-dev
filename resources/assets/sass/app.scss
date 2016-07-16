@@ -4,6 +4,10 @@ $grey-light: black;
 $orange: #ea683f;
 $jaune : #ffed00;
 
+
+$green: #75D13B;
+$grey: #e9e9e9;
+
 @font-face {
     font-family: "DINCond-Bold";
     src: url('../fonts/typo/DINCond-Bold.otf');
@@ -130,6 +134,12 @@ header {
     ul{
 
         li {
+
+            a {
+                color: $green;
+                cursor: pointer;
+
+            }
             i {
                 width: 20px;
             }
@@ -300,8 +310,6 @@ header {
 
 
 
-$green: #75D13B;
-$grey: #e9e9e9;
 
 @mixin transition($dur, $prop: all) {
     transition: $prop $dur ease;

@@ -111,6 +111,11 @@ header a:hover {
   padding: 20px;
 }
 
+.vertical-menu ul li a {
+  color: #75D13B;
+  cursor: pointer;
+}
+
 .vertical-menu ul li i {
   width: 20px;
 }
