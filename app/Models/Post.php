@@ -9,7 +9,7 @@ class Post extends BaseModel
 
     protected $table = 'posts';
 
-    protected $fillable = ['title', 'content', 'author','images_ids', 'type', 'category_id', 'theme_id', 'state'];
+    protected $fillable = ['title', 'content', 'author','images_ids', 'type', 'category_id', 'theme_id', 'state', 'cover_filename'];
 
     public function user()
     {
@@ -33,6 +33,6 @@ class Post extends BaseModel
 
     public function getUploadCoverFolderPathAttribute()
     {
-        return public_path().'/uploads/'.$this->uploadCoverFolder;
+        return public_path().'/uploads/'.$this->uploadFolder;
     }
 }
