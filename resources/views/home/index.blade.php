@@ -9,24 +9,16 @@
     <section class="content-slider">
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+          @foreach($images as $key => $img)
+            <li data-target="#carousel-example-generic" data-slide-to="{{ $key }}" class="{{ $key == 0 ? 'active' : '' }}"></li>
+          @endforeach
         </ol>
         <div class="carousel-inner" role="listbox">
-          <div class="carousel-item active">
-            <img src="{{ asset('img/img1.JPG') }}" data-src="{{ asset('img/img1.JPG') }}" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img src="{{ asset('img/img2.JPG') }}" data-src="{{ asset('img/img2.JPG') }}" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img src="{{ asset('img/img3.JPG') }}"   data-src="{{ asset('img/img3.JPG') }}" alt="Third slide">
-          </div>
-          <div class="carousel-item">
-            <img src="{{ asset('img/img4.JPG') }}" data-src="{{ asset('img/img4.JPG') }}" alt="Fourth slide">
-          </div>
+          @foreach($images as $key => $img)
+            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+              <img src="{{ asset('uploads/images/'.$img->image_filename) }}" data-src="{{ asset('uploads/images/'.$img->image_filename) }}" alt="First slide">
+            </div>
+          @endforeach
         </div>
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
           <span class="icon-prev" aria-hidden="true"></span>
