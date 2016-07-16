@@ -4,25 +4,28 @@
 
     @include('partials.navbar')
 
-    <div class="container">
-        <section class="content-section">
-            <div id='main'>
-                <div id='posts-list'>
-                    @foreach($themes as $theme)
-                        <div class='post'>
-                            <h3><a href="{{ route('forum.show', [$theme]) }}">{{ $theme->title }}</a></h3>
-                            @if(count($theme->posts) > 0)
-                                <ul>
-                                    Sujets :
-                                    @foreach($theme->posts as $post)
-                                        <li> {{ $post->title }}</li>
-                                    @endforeach
-                                </ul>
-                            @endif
-                        </div>
-                    @endforeach
+    <div class="container" style="padding-top: 10px">
+        @foreach($posts as $post)
+            <div class="blog-card">
+                <div class="photo photo1"></div>
+                <ul class="details">
+                    <li class="author"><a href="#">{{ $post->user->full_name }}</a></li>
+                    <li class="date">{{ $post->created_at->format('d/m/Y à h:i') }}</li>
+                    <li class="tags">
+                        <ul>
+                            <li><a href="#">Learn</a></li>
+                            <li><a href="#">Code</a></li>
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="description">
+                    <h1>{{ $post->title }}</h1>
+                    <p class="summary">{!! substr(Markdown::convertToHtml($post->content), 0 , 200)  !!} ...</p>
+                    <a href="{{ url('forum/'.$post->theme->id.'/subject/'.$post->id) }}">Lire plus</a>
                 </div>
             </div>
-        </section>
+        @endforeach
     </div>
 @stop
