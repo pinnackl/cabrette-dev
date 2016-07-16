@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-md-6">
             <legend>Modifier les informations</legend>
-            {!! Form::model($category, ['route' => ['admin.categories.update', $category], 'method' => $category->exist ? 'PUT' : 'POST', 'files' => true]) !!}
+            {!! Form::model($category, ['route' => ['admin.categories.update', $category], 'method' => $category->id ? 'PUT' : 'POST', 'files' => true]) !!}
                 {!! Form::bsText('title') !!}
                 {!! Form::bsButton('Enregistrer') !!}
             {!! Form::close() !!}

@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-md-12">
             <legend>Modifier les informations</legend>
-            {!! Form::model($announce, ['route' => ['admin.announces.update', $announce], 'method' => $announce->exist ? 'PUT' : 'POST', 'files' => true]) !!}
+            {!! Form::model($announce, ['route' => ['admin.announces.update', $announce], 'method' => $announce->id ? 'PUT' : 'POST', 'files' => true]) !!}
             {!! Form::bsText('title') !!}
             {!! Form::bsSelect('categories', $categories) !!}
             {!! Form::bsTextarea('content') !!}

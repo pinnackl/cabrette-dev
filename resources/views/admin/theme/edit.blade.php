@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-md-12">
             <legend>Modifier les informations</legend>
-            {!! Form::model($theme, ['route' => ['admin.themes.update', $theme], 'method' => $theme->exist ? 'PUT' : 'POST', 'files' => true]) !!}
+            {!! Form::model($theme, ['route' => ['admin.themes.update', $theme], 'method' => $theme->id ? 'PUT' : 'POST', 'files' => true]) !!}
             {!! Form::bsText('title') !!}
             {!! Form::bsButton('Enregistrer') !!}
             {!! Form::close() !!}

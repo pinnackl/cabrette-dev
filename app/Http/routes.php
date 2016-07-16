@@ -33,8 +33,6 @@ Route::get('/', ['as' => '/', 'uses' => 'HomeController@index']);
 
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('event-calendar',['as' => 'event-calendar',  'uses' =>  'CalendarController@index']);
-
     Route::group(['middleware' => 'admin', 'namespace' => 'Admin', 'prefix' => 'admin'], function () {
         Route::resource('users', 'UserController');
         Route::resource('categories', 'CategoryController');

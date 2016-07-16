@@ -26,6 +26,7 @@
 
                 <legend>Modifier le mot de passe</legend>
                 {!! Form::model($user, ['url' => 'profile.update', 'method' => 'PUT']) !!}
+                {!! Form::hidden('modif_password', true) !!}
                 {!! Form::bsPassword('new_password') !!}
                 {!! Form::bsPassword('confirm_new_password') !!}
 

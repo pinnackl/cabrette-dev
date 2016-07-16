@@ -28,7 +28,6 @@
             <legend>Modifier le mot de passe</legend>
             {!! Form::model($user, ['route' => ['admin.users.update', $user], 'method' => 'PUT']) !!}
                 {!! Form::bsText('password', '') !!}
-
                 {!! Form::bsButton('Enregistrer') !!}
             {!! Form::close() !!}
 
