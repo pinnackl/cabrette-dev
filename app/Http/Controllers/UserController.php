@@ -24,10 +24,12 @@ class UserController extends BaseController
 
         $user->fill(Input::all());
 
-        if (Input::get('modif_password') && (Input::get('new_password') == Input::get('confirm_new_password'))) {
-            $user->password = Input::get('confirm_new_password');
-        } else {
-            return redirect()->back()->withErrors('Les deux mots de passes ne sont pas identiques');
+        if (Input::has('modif_password')) {
+            if ((Input::get('new_password') == Input::get('confirm_new_password'))) {
+                $user->password = Input::get('confirm_new_password');
+            } else {
+                return redirect()->back()->withErrors('Les deux mots de passes ne sont pas identiques');
+            }
         }
 
         $user->save();
