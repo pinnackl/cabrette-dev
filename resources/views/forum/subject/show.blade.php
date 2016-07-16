@@ -28,7 +28,7 @@
                         {!! Form::close() !!}
                     </div>
                     <p>
-                        {{ $comment->content }}
+                    {!! Markdown::convertToHtml($comment->content) !!}
                     </p>
                     <small style="position:absolute;right: 5px;bottom: 5px;">Commenté il y à {{ $comment->created_at->diffForHumans() }} par {{ $comment->user->full_name }}</small>
                 </div>

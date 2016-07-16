@@ -68,7 +68,7 @@
           <ul>
             @foreach($subjects as $subject)
               <li>
-                <a href="#">{{ $subject->title }}</a>
+                <a href="{{ url('forum/'.$subject->theme->id.'/subject/'.$subject->id) }}">{{ $subject->title }}</a>
               </li>
             @endforeach
           </ul>
