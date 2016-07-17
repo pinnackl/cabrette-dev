@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\UploadFileHelper;
 use App\Http\Controllers\BaseController;
-use App\Models\Announce;
-use App\Models\Media;
+use App\Models\Contact;
 use App\Models\Post;
 use Input, Auth;
 
@@ -28,5 +26,13 @@ class PageController extends BaseController
     public function contact()
     {
         return view('page.contact');
+    }
+
+    public function postContact()
+    {
+        $contact = New Contact(Input::all());
+        $contact->save();
+
+        return redirect()->back()->with('success', 'Prise de contact bien enregistrée');
     }
 }

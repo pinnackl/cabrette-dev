@@ -72,5 +72,6 @@ Route::get('forum/{theme_id}/subject/{post_id}', ['as' => 'forum.subject.show', 
 Route::get('association', ['as' => 'association', 'uses' => 'PageController@association']);
 Route::get('cabrette', ['as' => 'cabrette', 'uses' => 'PageController@cabrette']);
 Route::get('contact', ['as' => 'contact', 'uses' => 'PageController@contact']);
+Route::post('contact', ['as' => 'contact', 'uses' => 'PageController@postContact']);
 Route::get('agenda', ['as' => 'agenda.index', 'uses' => 'AgendaController@index']);
 Route::get('events-all', ['as' => 'event-all', 'uses' => 'Admin\EventController@all']);

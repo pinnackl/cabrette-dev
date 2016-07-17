@@ -133,6 +133,7 @@ return [
         'address' => 'Adresse',
         'comment' => 'Commentaire',
         'state' => 'Etat',
+        'message' => 'Message'
      ],
 
 ];
