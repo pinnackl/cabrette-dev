@@ -562,3 +562,23 @@ header {
         }
     }
 }
+
+
+.summary {
+    position: relative;
+    margin: 0;
+    padding-top: 20px;
+    margin-left: 18px;
+
+    &:after {
+        content: "";
+        background: $green;
+        height: 6px;
+        width: 40px;
+
+        /*POSITION*/
+        position: absolute;
+        top: 6px;
+        left: 0;
+    }
+}

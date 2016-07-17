@@ -493,3 +493,21 @@ header a:hover {
     bottom: 0;
   }
 }
+
+.summary {
+  position: relative;
+  margin: 0;
+  padding-top: 20px;
+  margin-left: 18px;
+}
+
+.summary:after {
+  content: "";
+  background: #75D13B;
+  height: 6px;
+  width: 40px;
+  /*POSITION*/
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
