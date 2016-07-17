@@ -133,7 +133,9 @@ return [
         'address' => 'Adresse',
         'comment' => 'Commentaire',
         'state' => 'Etat',
-        'message' => 'Message'
+        'message' => 'Message',
+        'image_filename' => 'Nom de l\'image',
+        'order' => 'Ordre'
      ],
 
 ];

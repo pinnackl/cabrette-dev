@@ -18,7 +18,7 @@
                 <a class="nav-link {{ $segment == 'cabrette' ? 'active' : ''}}" href="{{ route('cabrette') }}">La cabrette</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Media</a>
+                <a class="nav-link dropdown-toggle {{ $segment == 'media' ? 'active' : ''}}" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Media</a>
                 <div class="dropdown-menu">
                 <a class="dropdown-item" href="{{ route('media.video') }}">Videos</a>
                 <a class="dropdown-item" href="{{ route('media.music') }}">Musiques</a>

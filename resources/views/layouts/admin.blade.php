@@ -50,7 +50,7 @@
                 </li>
 
                 <li class="nav-item {{ Request::segments()[1] == 'images' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.images.index') }}"> <i class="fa fa-youtube-play"></i> Home Images slider</a>
+                    <a class="nav-link" href="{{ route('admin.images.index') }}"> <i class="fa fa-file-image-o"></i> Images slider</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav pull-right">
