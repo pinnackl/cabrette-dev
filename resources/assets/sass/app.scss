@@ -717,3 +717,11 @@ header {
     padding: 10px;
     margin-bottom: 10px !important;
 }
+
+.content-section {
+    .row {
+        background: #fff;
+        border-radius: 3px;
+        box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+    }
+}
