@@ -23,7 +23,7 @@
                 <div class="description">
                     <h1 style="font-size: 28px">{{ $post->title }}</h1>
                     <h2>{{ $post->theme->title }}</h2>
-                    <p class="summary">{!! substr(Markdown::convertToHtml($post->content), 0 , 200)  !!} ...</p>
+                    <p class="summary">{!! substr(Markdown::convertToHtml($post->content), 0 , 180)  !!} ...</p>
                     <a href="{{ url('forum/'.$post->theme->id.'/subject/'.$post->id) }}">Lire plus</a>
                 </div>
             </div>
