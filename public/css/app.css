@@ -79,11 +79,18 @@ header a:hover {
 }
 
 .content-home .event-block {
-  min-height: 200px;
-  width: 20%;
+  min-height: 150px;
+  width: 100%;
   display: inline-block;
   vertical-align: top;
-  background-color: #0066bb;
+  background-color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-radius: 3px;
+  box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
 }
 
 .content-home .right-block {
@@ -538,4 +545,83 @@ header a:hover {
   position: absolute;
   top: 6px;
   left: 0;
+}
+
+.first-block-content-home {
+  min-height: 200px;
+  margin-bottom: 20px;
+}
+
+.block-announces-home {
+  background-color: white;
+  text-align: center;
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  position: relative;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-radius: 3px;
+  box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+}
+
+.block-announces-home .see-more {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  color: #75D13B;
+}
+
+.block-announces-home ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.block-courses-home {
+  background-color: white;
+  text-align: center;
+  width: 49.8%;
+  display: inline-block;
+  vertical-align: top;
+  min-height: 208px;
+  position: relative;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-radius: 3px;
+  box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+}
+
+.block-courses-home .see-more {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  color: #75D13B;
+}
+
+.block-courses-home ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.block-forum-home {
+  background-color: white;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-radius: 3px;
+  box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+}
+
+.block-forum-home .see-more {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  color: #75D13B;
+}
+
+.block-forum-home ul {
+  padding-left: 0;
+  list-style: none;
 }

@@ -32,17 +32,18 @@
     </section>
 
     <section class="content-home">
-      <div class="event-block col-md-3 ">
-        <h2>Event</h2>
+      <div class="event-block">
+        <h2>Evénements</h2>
         @if($event)
           <p>
-            {{ $event->title  }}
+            {{ $event->title  }} <br>
+            Dans {{ $event->date_start->diffForHumans(null, true) }}
           </p>
         @endif
       </div>
 
-      <div class="right-block">
-        <div class="col-md-4">
+      <div class="first-block-content-home">
+        <div class="block-announces-home">
           <h2>Annonces</h2>
           <ul>
             @foreach($announces as $announce)
@@ -51,8 +52,9 @@
               </li>
             @endforeach
           </ul>
+          <a class="see-more" href="{{ route('announces.index') }}"> Voir plus</a>
         </div>
-        <div class="col-md-4">
+        <div class="block-courses-home">
           <h2>Cours</h2>
           <ul>
             @foreach($courses as $course)
@@ -61,9 +63,11 @@
               </li>
             @endforeach
           </ul>
+          <a class="see-more" href="{{ route('courses.index') }}"> Voir plus</a>
         </div>
+      </div>
 
-        <div class="col-md-4">
+        <div class="block-forum-home">
           <h2>Forum</h2>
           <ul>
             @foreach($subjects as $subject)
@@ -72,9 +76,10 @@
               </li>
             @endforeach
           </ul>
+          <a class="see-more" href="{{ route('forum.index') }}"> Voir plus</a>
         </div>
 
-      </div>
+
     </section>
   </div>
 @stop

@@ -12,11 +12,13 @@ class HomeController extends BaseController
 {
     public function index()
     {
-        $courses = Course::all();
-        $announces = Announce::all();
+        $courses = Course::orderBy('created_at', 'desc')->take(5)->get();
+        $announces = Announce::orderBy('created_at', 'desc')->take(5)->get();
         $images = Image::all();
 
-        $subjects = Post::where('title', '!=', 'association')->where('title', '!=', 'cabrette')->get();
+        Carbon::setLocale('fr');
+
+        $subjects = Post::where('title', '!=', 'association')->where('title', '!=', 'cabrette')->orderBy('created_at', 'desc')->take(5)->get();
 
         $event =  Event::where('date_start', '>=', Carbon::now())->first();
 

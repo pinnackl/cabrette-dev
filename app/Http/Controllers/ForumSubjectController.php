@@ -6,6 +6,7 @@ use App\Helpers\UploadFileHelper;
 use App\Http\Controllers\BaseController;
 use App\Models\Post;
 use App\Models\Theme;
+use Carbon\Carbon;
 use Input, Auth;
 
 class ForumSubjectController extends BaseController
@@ -15,6 +16,8 @@ class ForumSubjectController extends BaseController
     {
         $theme = Theme::findOrFail($theme_id);
         $post = Post::findOrFail($subject_id);
+
+        Carbon::setLocale('fr');
 
         return view('forum.subject.show', compact('theme', 'post'));
     }
