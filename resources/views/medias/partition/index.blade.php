@@ -13,7 +13,7 @@
                         <div class="blog-media">
                             <h2>{{ $media->title }}</h2>
                             <p class="summary"></p>
-                            <a href="{{ asset('uploads/'.$media->uploadFolder.'/'.$media->filename) }}"></a>
+                            <a href="{{ asset('uploads/'.$media->uploadFolder.'/'.$media->filename) }}" target="_blank">Voir la partition</a>
                         </div>
                     @endforeach
                 </div>
