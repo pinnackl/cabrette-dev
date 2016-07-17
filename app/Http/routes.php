@@ -75,3 +75,7 @@ Route::get('contact', ['as' => 'contact', 'uses' => 'PageController@contact']);
 Route::post('contact', ['as' => 'contact', 'uses' => 'PageController@postContact']);
 Route::get('agenda', ['as' => 'agenda.index', 'uses' => 'AgendaController@index']);
 Route::get('events-all', ['as' => 'event-all', 'uses' => 'Admin\EventController@all']);
+
+Route::get('media/video', ['as' => 'media.video', 'uses' => 'MediaController@getMediaVideo']);
+Route::get('media/musique', ['as' => 'media.music', 'uses' => 'MediaController@getMediaMusic']);
+Route::get('media/partitions', ['as' => 'media.partition', 'uses' => 'MediaController@getMediaPartition']);

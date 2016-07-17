@@ -15,7 +15,7 @@
                 {!! Form::bsSelect('type', $types) !!}
                 {!! Form::bsText('title') !!}
 
-                {!! Form::file('filename') !!}
+                {!! Form::file('file') !!}
                 {!! Form::bsButton('Enregistrer') !!}
             {!! Form::close() !!}
         </div>

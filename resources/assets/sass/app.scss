@@ -437,14 +437,12 @@ header {
         position: relative;
 
         h1 {
-            font-family: "Roboto";
             line-height: 1em;
             margin: 0 0 10px 0;
         }
 
         h2 {
             color: $grey / 1.5;
-            font-family: "Open Sans";
             line-height: 1.2em;
             text-transform: uppercase;
             font-size: 1em;
@@ -581,4 +579,36 @@ header {
         top: 6px;
         left: 0;
     }
+}
+
+.blog-media {
+    width: 44%;
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .summary {
+        position: relative;
+        margin: 0;
+        padding-top: 20px;
+
+        &:after {
+            content: "";
+            background: $green;
+            height: 6px;
+            width: 40px;
+
+            /*POSITION*/
+            position: absolute;
+            top: 6px;
+            left: 0;
+        }
+    }
+
 }

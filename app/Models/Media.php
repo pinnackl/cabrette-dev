@@ -4,7 +4,6 @@ namespace App\Models;
 
 class Media extends BaseModel
 {
-
     public $uploadFolder = 'medias';
 
     protected $table = 'medias';

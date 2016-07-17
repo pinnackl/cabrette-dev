@@ -27,6 +27,14 @@ class MediaController extends BaseController
     public function store()
     {
         $media = new Media(Input::all());
+
+        if(Input::file()) {
+            if (Input::file('file')) {
+                $coverFile = Input::file('file');
+                UploadFileHelper::moveToDestinationAndSaveInModel($coverFile, $media, 'filename');
+            }
+        }
+
         $media->save();
 
         return redirect(route('admin.medias.index'));
@@ -44,6 +52,13 @@ class MediaController extends BaseController
         $media = Media::findOrFail($id);
 
         $media->fill(Input::all());
+
+        if(Input::file()) {
+            if (Input::file('file')) {
+                $coverFile = Input::file('file');
+                UploadFileHelper::moveToDestinationAndSaveInModel($coverFile, $media, 'filename');
+            }
+        }
 
         $media->save();
 

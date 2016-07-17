@@ -372,14 +372,12 @@ header a:hover {
 }
 
 .blog-card .description h1 {
-  font-family: "Roboto";
   line-height: 1em;
   margin: 0 0 10px 0;
 }
 
 .blog-card .description h2 {
   color: #9b9b9b;
-  font-family: "Open Sans";
   line-height: 1.2em;
   text-transform: uppercase;
   font-size: 1em;
@@ -502,6 +500,36 @@ header a:hover {
 }
 
 .summary:after {
+  content: "";
+  background: #75D13B;
+  height: 6px;
+  width: 40px;
+  /*POSITION*/
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+
+.blog-media {
+  width: 44%;
+  display: inline-block;
+  background-color: white;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+}
+
+.blog-media h2 {
+  margin-bottom: 10px;
+}
+
+.blog-media .summary {
+  position: relative;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.blog-media .summary:after {
   content: "";
   background: #75D13B;
   height: 6px;
