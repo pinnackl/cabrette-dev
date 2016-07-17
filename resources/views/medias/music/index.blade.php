@@ -7,7 +7,7 @@
     <div class="container">
         <section class="content-section">
             <div id='main'>
-                <h2 style="background: #fff;border-radius: 3px;box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);margin-top: 20px;padding: 10px">Musiques</h2>
+                <h2 class="title-media">Musiques</h2>
                 <div id='posts-list' style="padding-top: 10px">
                     @foreach($medias as $media)
                         <div class="blog-media">
