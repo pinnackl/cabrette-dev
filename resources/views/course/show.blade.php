@@ -4,7 +4,7 @@
 
     @include('partials.navbar')
 
-    @include('partials.breadcrumb', ['link_item_principal' => 'courses' , 'item_principal'=> 'Cours', 'item' => $course ])
+    @include('partials.breadcrumb', ['link_item_principal' => 'cours' , 'item_principal'=> 'Cours', 'item' => $course ])
 
     <div class="container">
         <section class="content-section">

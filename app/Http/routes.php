@@ -64,8 +64,8 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
-Route::resource('courses', 'CourseController');
-Route::resource('announces', 'AnnounceController');
+Route::resource('cours', 'CourseController');
+Route::resource('annonces', 'AnnounceController');
 Route::resource('forum', 'ForumController');
 
 Route::get('forum/{theme_id}/subject/{post_id}', ['as' => 'forum.subject.show', 'uses' =>  'ForumSubjectController@show']);

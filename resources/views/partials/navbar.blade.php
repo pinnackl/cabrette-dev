@@ -26,10 +26,10 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ $segment == 'announces' ? 'active' : ''}}" href="{{ route('announces.index') }}">Petites annonces</a>
+                <a class="nav-link {{ $segment == 'annonces' ? 'active' : ''}}" href="{{ route('annonces.index') }}">Petites annonces</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ $segment == 'courses' ? 'active' : ''}}" href="{{ route('courses.index') }}">Cours</a>
+                <a class="nav-link {{ $segment == 'cours' ? 'active' : ''}}" href="{{ route('cours.index') }}">Cours</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ $segment == 'forum' ? 'active' : ''}}" href="{{ route('forum.index') }}">Forum</a>

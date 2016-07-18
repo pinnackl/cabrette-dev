@@ -14,7 +14,7 @@
                                 <h1 style="font-size: 28px">{{ $course->title }}</h1>
                                 <h2> <small>Publié le {{ $course->created_at->format('d/m/Y') }}</small></h2>
                                 <p class="summary">{!! substr(Markdown::convertToHtml($course->content), 0 , 180)  !!} ...</p>
-                                <a href="{{ route('courses.show', [$course]) }}"> Voir plus</a>
+                                <a href="{{ route('cours.show', [$course]) }}"> Voir plus</a>
                             </div>
                         </div>
                     @endforeach

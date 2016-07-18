@@ -48,22 +48,22 @@
           <ul>
             @foreach($announces as $announce)
               <li>
-                <a href="{{ route('announces.show', [$announce]) }}">{{ $announce->title }}</a>
+                <a href="{{ route('annonces.show', [$announce]) }}">{{ $announce->title }}</a>
               </li>
             @endforeach
           </ul>
-          <a class="see-more" href="{{ route('announces.index') }}"> Voir plus</a>
+          <a class="see-more" href="{{ route('annonces.index') }}"> Voir plus</a>
         </div>
         <div class="block-courses-home">
           <h2>Cours</h2>
           <ul>
             @foreach($courses as $course)
               <li>
-                <a href="{{ route('courses.show', [$course]) }}">{{ $course->title }}</a>
+                <a href="{{ route('cours.show', [$course]) }}">{{ $course->title }}</a>
               </li>
             @endforeach
           </ul>
-          <a class="see-more" href="{{ route('courses.index') }}"> Voir plus</a>
+          <a class="see-more" href="{{ route('cours.index') }}"> Voir plus</a>
         </div>
       </div>
 
