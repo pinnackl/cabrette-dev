@@ -1,5 +1,5 @@
 <div class="container">
-    <ol class="breadcrumb" style="padding-left: 0;padding-right: 0">
+    <ol class="breadcrumb" style="background: #fff;border-radius: 3px;box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);">
         @if($item == '')
             <li>{{ $item_principal }}</li>
         @else

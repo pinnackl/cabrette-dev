@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\BaseController;
-use App\Models\User;
-use Illuminate\Support\Facades\Crypt;
 use Input, Auth;
 
 

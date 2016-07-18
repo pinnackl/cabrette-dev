@@ -27,8 +27,9 @@
     <footer class="footer" style="text-align: center">
         <div class="container">
             <ul>
-                <li>CGU</li> -
-                <li>Contact</li>
+                <li><a href="{{ route('cgu') }}">CGU</a></li> -
+                <li><a href="{{ route('contact') }}">Contact</a></li> -
+                <li><a href="{{ route('newsletter') }}">Newsletter</a></li>
             </ul>
         </div>
     </footer>

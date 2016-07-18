@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\BaseController;
 use App\Models\Contact;
+use App\Models\Newsletter;
 use App\Models\Post;
 use Input, Auth;
 
@@ -34,5 +35,23 @@ class PageController extends BaseController
         $contact->save();
 
         return redirect()->back()->with('success', 'Prise de contact bien enregistrée');
+    }
+
+    public function cgu()
+    {
+        return view('page.cgu');
+    }
+
+    public function newsletter()
+    {
+        return view('page.newletter');
+    }
+
+    public function postNewsletter()
+    {
+        $newletter = New Newsletter(Input::all());
+        $newletter->save();
+
+        return redirect()->back()->with('success', 'Abonnement à la Newsletter bien enregistré');
     }
 }

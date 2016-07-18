@@ -73,6 +73,12 @@ Route::get('association', ['as' => 'association', 'uses' => 'PageController@asso
 Route::get('cabrette', ['as' => 'cabrette', 'uses' => 'PageController@cabrette']);
 Route::get('contact', ['as' => 'contact', 'uses' => 'PageController@contact']);
 Route::post('contact', ['as' => 'contact', 'uses' => 'PageController@postContact']);
+
+Route::get('newsletter', ['as' => 'newsletter', 'uses' => 'PageController@newsletter']);
+Route::post('newsletter', ['as' => 'newsletter', 'uses' => 'PageController@postNewsletter']);
+
+Route::get('cgu', ['as' => 'cgu', 'uses' => 'PageController@cgu']);
+
 Route::get('agenda', ['as' => 'agenda.index', 'uses' => 'AgendaController@index']);
 Route::get('events-all', ['as' => 'event-all', 'uses' => 'Admin\EventController@all']);
 
