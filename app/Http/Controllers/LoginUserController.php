@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Auth;
 use Exception;
+use Illuminate\Support\Facades\Mail;
 use Input;
 use Session;
 
@@ -34,6 +35,10 @@ class LoginUserController extends BaseController
 
         Auth::login($user);
 
-        return redirect(route('/'));
+        Mail::send('emails.inscription', ['user' => $user], function ($m) use ($user) {
+            $m->to($user->email, $user->name)->subject('Confirmation d\'inscription');
+        });
+
+        return redirect(route('/'))->with('success', 'Votre compte à bien été créé, un email de confirmation vous à été envoyé');
     }
 }
