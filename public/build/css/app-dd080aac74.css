@@ -432,6 +432,13 @@ header a:hover {
   opacity: 1;
 }
 
+.blog-card .description .block-author {
+  position: absolute;
+  bottom: -5px;
+  right: 5px;
+  color: #9b9b9b;
+}
+
 @media screen and (min-width: 600px) {
   .blog-card {
     height: 200px;
