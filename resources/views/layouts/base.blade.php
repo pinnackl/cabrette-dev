@@ -24,6 +24,7 @@
     <script type="text/javascript" src="{{ url('js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ url('js/jquery-ui.min.js') }}"></script>
     <script type="text/javascript" src="{{ url('js/bootstrap.min.js') }}"></script>
+    {{--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>--}}
     <script type="text/javascript" src="{{ url('js/main.js') }}"></script>
 
     @yield('footer-link')

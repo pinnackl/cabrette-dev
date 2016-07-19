@@ -15,7 +15,7 @@
                     <label for="" style="width: 25%">Image </label>
                     {!! Form::file('image_filename') !!}
                 </div>
-                {!! Form::bsInput('number', 'order', 1, ['style' => 'width:20%', 'placeholder' => '0']) !!}
+                {!! Form::bsInput('number', 'order', $image->order ? $image->order : $nbImages + 1, ['style' => 'width:20%', 'placeholder' => '0']) !!}
                 {!! Form::bsButton('Enregistrer') !!}
             {!! Form::close() !!}
         </div>

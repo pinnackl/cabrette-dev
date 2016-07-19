@@ -66,7 +66,15 @@ $(function(){
         $("footer#footer").css("position","absolute").css("bottom",0).css('left', 0).css('right', 0);
     }
 
+    //var autocomplete=[]
+    //var addAutocomplete = function (i) {
+    //
+    //    autocomplete[i] = new google.maps.places.Autocomplete($("input[name='address']")[i], {types: ['geocode']})
+    //}
+    //addAutocomplete(0);
+
 });
+
 
 
 

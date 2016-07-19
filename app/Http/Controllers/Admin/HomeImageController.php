@@ -19,8 +19,9 @@ class HomeImageController extends BaseController
     public function create()
     {
         $image = new Image;
+        $nbImages = count(Image::all());
 
-        return view('admin.image.edit', compact('image'));
+        return view('admin.image.edit', compact('image', 'nbImages'));
     }
 
     public function store()
@@ -42,8 +43,9 @@ class HomeImageController extends BaseController
     public function edit($id)
     {
         $image = Image::findOrFail($id);
+        $nbImages = count(Image::all());
 
-        return view('admin.image.edit', compact('image'));
+        return view('admin.image.edit', compact('image', 'nbImages'));
     }
 
     public function update($id)
