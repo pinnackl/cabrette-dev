@@ -9,8 +9,8 @@
             <div class="col-md-12">
                 <legend>Créer un article</legend>
                 {!! Form::model($post, ['route' => $post->exists ? ['posts.update', $post] : ['posts.store'] , 'method' => $post->exists ?  'PUT' : 'POST ', 'files' => true]) !!}
-                {!! Form::bsText('title') !!}
-                {!! Form::bsText('link_url') !!}
+                {!! Form::bsText('title', null, ['required']) !!}
+                {!! Form::bsText('link_url', null, ['required']) !!}
                 <div class="form-group" style="margin-left: 26%">
                     <label for="">Sans théme </label>
                     <input type="radio" name="type_theme" class="radio-theme" value="0" checked>

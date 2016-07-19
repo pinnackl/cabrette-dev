@@ -9,7 +9,7 @@
             <div class="col-md-12">
                 <legend> {{ $announce->id ? 'Modifier l\'annonce' : 'Créer une annonce' }}</legend>
                 {!! Form::model($announce, ['route' => $announce->id ? ['annonces.update', $announce] : ['annonces.store'], 'method' => $announce->exist ? 'PUT' : 'POST']) !!}
-                {!! Form::bsText('title') !!}
+                {!! Form::bsText('title', null, ['required']) !!}
                 {!! Form::bsSelect('categories', $categories, $announce->category != null ? $announce->category->id : null) !!}
                 {!! Form::bsTextarea('content', null, ['style' => 'min-height:300px']) !!}
                 {!! Form::bsButton('Enregistrer') !!}

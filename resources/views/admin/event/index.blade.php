@@ -25,7 +25,7 @@
                     </div>
                     <div class="modal-body">
                         {!! Form::open( ['route' => ['admin.events.store'], 'method' => 'POST', 'files' => true]) !!}
-                            {!! Form::bsText('title') !!}
+                            {!! Form::bsText('title', null, ['required']) !!}
                             {!! Form::bsText('address', null, ['placeholder' => 'Paris, france']) !!}
 
                             <div class="form-group" style="margin-left: 26%">
