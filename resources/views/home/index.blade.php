@@ -33,12 +33,13 @@
 
     <section class="content-home">
       <div class="event-block">
-        <h2>Evénements</h2>
+        <h2>Prochain événement</h2>
         @if($event)
-          <p>
+          <p style="margin-bottom: 0">
             {{ $event->title  }} <br>
-            Dans {{ $event->date_start->diffForHumans(null, true) }}
+            Dans {{ $event->date_start->diffForHumans(null, true) }} à {{ $event->address }}
           </p>
+          <a class="see-more" href="{{ route('agenda.index') }}"> Voir l'agenda</a>
         @endif
       </div>
 

@@ -65,7 +65,7 @@ header a:hover {
 }
 
 .content-home .event-block {
-  min-height: 150px;
+  min-height: 130px;
   width: 100%;
   display: inline-block;
   vertical-align: top;
@@ -74,9 +74,16 @@ header a:hover {
   margin-bottom: 20px;
   position: relative;
   padding: 10px;
-  padding-bottom: 20px;
   border-radius: 3px;
   box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+}
+
+.content-home .event-block .see-more {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  color: #75D13B;
+  cursor: pointer;
 }
 
 .content-home .right-block {
@@ -213,6 +220,11 @@ header a:hover {
 
 .footer .container ul li {
   display: inline-block;
+}
+
+.footer .container ul a {
+  color: black;
+  text-decoration: none;
 }
 
 .body-img {
@@ -565,6 +577,7 @@ header a:hover {
   bottom: 5px;
   right: 10px;
   color: #75D13B;
+  cursor: pointer;
 }
 
 .block-announces-home ul {
@@ -591,6 +604,7 @@ header a:hover {
   bottom: 5px;
   right: 10px;
   color: #75D13B;
+  cursor: pointer;
 }
 
 .block-courses-home ul {
@@ -613,6 +627,7 @@ header a:hover {
   bottom: 5px;
   right: 10px;
   color: #75D13B;
+  cursor: pointer;
 }
 
 .block-forum-home ul {
