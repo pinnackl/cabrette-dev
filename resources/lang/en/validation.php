@@ -136,7 +136,8 @@ return [
         'message' => 'Message',
         'image_filename' => 'Nom de l\'image',
         'order' => 'Ordre',
-        'link_url' => 'URL (minuscule sans accent, ni caractères spéciaux, ni espace)'
+        'link_url' => 'URL (minuscule sans accent, ni caractères spéciaux, ni espace)',
+        'created_at' => 'Date de demande'
      ],
 
 ];

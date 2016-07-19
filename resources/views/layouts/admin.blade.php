@@ -52,6 +52,9 @@
                 <li class="nav-item {{ Request::segments()[1] == 'images' ? 'active' : ''}}">
                     <a class="nav-link" href="{{ route('admin.images.index') }}"> <i class="fa fa-file-image-o"></i> Images slider</a>
                 </li>
+                <li class="nav-item {{ Request::segments()[1] == 'images' ? 'active' : ''}}">
+                    <a class="nav-link" href="{{ route('admin.contacts.index') }}"> <i class="fa fa-newspaper-o"></i> Contact </a>
+                </li>
             </ul>
             <ul class="nav navbar-nav pull-right">
                 <li class="nav-item" style="margin-right:10px">

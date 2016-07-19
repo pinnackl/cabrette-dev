@@ -12,7 +12,7 @@ class PostController extends BaseController
 {
     public function index()
     {
-        $posts = Post::paginate(20);
+        $posts = Post::where('title', '!=', 'cabrette')->where('title', '!=', 'association')->get();
 
         return view('admin.post.index', compact('posts'));
     }
