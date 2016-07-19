@@ -13,7 +13,8 @@ class EventController extends BaseController
 {
     public function index()
     {
-        $events = Event::paginate(20);
+        $events = Event::all();
+
         return view('admin.event.index', compact('events'));
     }
 
@@ -47,5 +48,13 @@ class EventController extends BaseController
         $eventsUser = Event::all();
 
         return response()->json(compact('eventsUser'));
+    }
+
+    public function destroy($id)
+    {
+        $event = Event::findOrFail($id);
+        $event->delete();
+
+        return redirect()->back()->with('success', 'Evènement bien supprimé');
     }
 }
