@@ -59,7 +59,7 @@
           <ul>
             @foreach($courses as $course)
               <li>
-                <a href="{{ route('cours.show', [$course]) }}">{{ $course->title }}</a>
+                <a href="{{ url('cours/'.$course->link_url) }}">{{ $course->title }}</a>
               </li>
             @endforeach
           </ul>

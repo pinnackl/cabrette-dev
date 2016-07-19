@@ -11,14 +11,14 @@ class CourseController extends BaseController
 {
     public function index()
     {
-        $courses = Course::paginate(20);
+        $courses = Course::orderBy('created_at', 'desc')->get();
 
         return view('course.index', compact('courses'));
     }
 
-    public function show($id)
+    public function show($link_url)
     {
-        $course = Course::findOrFail($id);
+        $course = Course::where('link_url', $link_url)->first();
 
         return view('course.show', compact('course'));
     }

@@ -68,6 +68,7 @@ Route::resource('cours', 'CourseController');
 Route::resource('annonces', 'AnnounceController');
 Route::resource('forum', 'ForumController');
 
+Route::get('cours/{link_url}', 'CourseController@show');
 Route::get('forum/{link_url}', 'ForumController@show');
 
 Route::get('association', ['as' => 'association', 'uses' => 'PageController@association']);

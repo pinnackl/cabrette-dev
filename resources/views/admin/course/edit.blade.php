@@ -12,6 +12,7 @@
             <legend>Modifier les informations</legend>
             {!! Form::model($course, ['route' => ['admin.courses.update', $course], 'method' => $course->id ? 'PUT' : 'POST', 'files' => true]) !!}
             {!! Form::bsText('title') !!}
+            {!! Form::bsText('link_url') !!}
             {!! Form::bsTextarea('content') !!}
             {!! Form::bsButton('Enregistrer') !!}
             {!! Form::close() !!}
