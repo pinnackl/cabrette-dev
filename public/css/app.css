@@ -59,20 +59,6 @@ header a:hover {
   width: 100%;
 }
 
-#footer {
-  height: 60px;
-  padding: 10px;
-  background-color: #f5f5f5;
-}
-
-#footer ul {
-  list-style: none;
-}
-
-#footer ul li {
-  display: inline-block;
-}
-
 .content-home {
   min-height: 500px;
   padding: 30px;
@@ -216,10 +202,9 @@ header a:hover {
 }
 
 .footer {
-  width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #f5f5f5;
+  padding: 10px;
 }
 
 .footer .container ul {
@@ -654,4 +639,11 @@ header a:hover {
   background: transparent;
   border-radius: 0;
   box-shadow: none;
+}
+
+#footer .stikybottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

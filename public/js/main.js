@@ -60,16 +60,14 @@ $(function(){
         $('.theme-select').toggle();
     });
 
+    var bodyHeight = $("body").height();
+    var vwptHeight = $(window).height();
+    if (vwptHeight > bodyHeight) {
+        $("footer#footer").css("position","absolute").css("bottom",0).css('left', 0).css('right', 0);
+    }
 
 });
 
 
-function fixFooter() {
-    if($('.wrapper').outerHeight() < (window.innerHeight - 90)) {
-        $('.footer').css('position', 'absolute');
-        $('.footer').css('bottom', '0');
-        $('.footer').css('width', 'calc(100% - 141px)');
-    } else {
-        $('.footer').css('position', 'static');
-    }
-}
+
+
