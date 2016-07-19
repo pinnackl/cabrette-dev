@@ -9,7 +9,7 @@ class Post extends BaseModel
 
     protected $table = 'posts';
 
-    protected $fillable = ['title', 'content', 'author','images_ids', 'type', 'category_id', 'theme_id', 'state', 'cover_filename'];
+    protected $fillable = ['title', 'content', 'author','images_ids', 'type', 'category_id', 'theme_id', 'state', 'cover_filename', 'link_url'];
 
     public function user()
     {

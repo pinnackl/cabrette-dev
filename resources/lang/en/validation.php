@@ -135,7 +135,8 @@ return [
         'state' => 'Etat',
         'message' => 'Message',
         'image_filename' => 'Nom de l\'image',
-        'order' => 'Ordre'
+        'order' => 'Ordre',
+        'link_url' => 'URL (minuscule sans accent, ni caractères spéciaux)'
      ],
 
 ];

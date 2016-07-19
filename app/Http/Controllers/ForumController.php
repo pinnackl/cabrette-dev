@@ -21,37 +21,11 @@ class ForumController extends BaseController
         return view('forum.index', compact('themes', 'posts'));
     }
 
-    public function create()
+    public function show($link_url)
     {
-        $announce = new Post;
-        $types = ['video' => 'Video' , 'music' => 'Music',  'partition' => 'Partitions'];
+        $post = Post::where('link_url', $link_url)->first();
 
-        return view('admin.forum.edit', compact('announce', 'types'));
+        return view('forum.subject.show', compact('post'));
     }
 
-    public function show($id)
-    {
-        $theme = Theme::findOrFail($id);
-
-        return view('forum.show', compact('theme'));
-    }
-
-    public function update($id)
-    {
-        $announce = Post::findOrFail($id);
-
-        $announce->fill(Input::all());
-
-        $announce->save();
-
-        return back()->with('info', 'Modifications bien enregistrées.');
-    }
-
-    public function destroy($id)
-    {
-        $announce = Post::findOrFail($id);
-        $announce->delete();
-
-        return redirect(route('admin.forums.index'));
-    }
 }

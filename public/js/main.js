@@ -56,6 +56,10 @@ $(function(){
         $('.date-end').toggle();
     });
 
+    $('.radio-theme').change(function () {
+        $('.theme-select').toggle();
+    });
+
 
 });
 

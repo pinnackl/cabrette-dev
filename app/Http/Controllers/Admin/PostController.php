@@ -30,7 +30,7 @@ class PostController extends BaseController
         $post = new Post(Input::all());
         $post->author = Auth::id();
 
-        if(Input::get('theme')) {
+        if(Input::get('type_theme') == 1 && Input::get('theme')) {
             $post->theme_id = Input::get('theme');
         }
 
@@ -61,7 +61,8 @@ class PostController extends BaseController
 
         $post->fill(Input::all());
 
-        if(Input::get('theme')) {
+
+        if(Input::get('type_theme') == 1 && Input::get('theme')) {
             $post->theme_id = Input::get('theme');
         }
 

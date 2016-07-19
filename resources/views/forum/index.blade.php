@@ -22,9 +22,13 @@
                 </ul>
                 <div class="description">
                     <h1 style="font-size: 28px">{{ $post->title }}</h1>
-                    <h2>{{ $post->theme->title }}</h2>
+                    @if($post->theme)
+                        <h2>{{ $post->theme->title }}</h2>
+                        @else
+                        <h2>&nbsp;  </h2>
+                    @endif
                     <p class="summary">{!! substr(Markdown::convertToHtml($post->content), 0 , 180)  !!} ...</p>
-                    <a href="{{ url('forum/'.$post->theme->id.'/subject/'.$post->id) }}">Lire plus</a>
+                    <a href="{{ url('forum/'.$post->link_url) }}">Lire plus</a>
                 </div>
             </div>
         @endforeach
