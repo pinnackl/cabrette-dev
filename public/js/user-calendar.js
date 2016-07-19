@@ -49,13 +49,9 @@ function initCalendar(filters) {
         }],
 
         eventClick: function eventClicked(event) {
+            $('.modal-event-'+event.id).modal('show');
         },
 
-        dayClick: function(date, allDay, jsEvent, view) {
-
-                alert('Clicked on: ' + date.format());
-
-        },
 
         eventDrop: function (event, delta, revertFunc) {
 
