@@ -13,7 +13,7 @@
             {!! Form::model($media, ['route' => ['admin.medias.update', $media], 'method' => $media->exist ? 'PUT' : 'POST', 'files' => true]) !!}
 
                 {!! Form::bsSelect('type', $types) !!}
-                {!! Form::bsText('title') !!}
+                {!! Form::bsText('title', null, ['required']) !!}
 
                 {!! Form::file('file') !!}
                 {!! Form::bsButton('Enregistrer') !!}

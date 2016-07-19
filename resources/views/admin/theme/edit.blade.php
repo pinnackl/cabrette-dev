@@ -11,7 +11,7 @@
         <div class="col-md-12">
             <legend>Modifier les informations</legend>
             {!! Form::model($theme, ['route' => ['admin.themes.update', $theme], 'method' => $theme->id ? 'PUT' : 'POST', 'files' => true]) !!}
-            {!! Form::bsText('title') !!}
+            {!! Form::bsText('title', null, ['required']) !!}
             {!! Form::bsButton('Enregistrer') !!}
             {!! Form::close() !!}
         </div>

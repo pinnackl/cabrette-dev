@@ -11,8 +11,8 @@
         <div class="col-md-12">
             <legend>Modifier les informations</legend>
             {!! Form::model($course, ['route' => ['admin.courses.update', $course], 'method' => $course->id ? 'PUT' : 'POST', 'files' => true]) !!}
-            {!! Form::bsText('title') !!}
-            {!! Form::bsText('link_url') !!}
+            {!! Form::bsText('title', null, ['required']) !!}
+            {!! Form::bsText('link_url', null, ['required']) !!}
             {!! Form::bsTextarea('content') !!}
             {!! Form::bsButton('Enregistrer') !!}
             {!! Form::close() !!}

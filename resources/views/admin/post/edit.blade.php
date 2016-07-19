@@ -11,8 +11,8 @@
         <div class="col-md-12">
             <legend>Modifier les informations</legend>
             {!! Form::model($post, ['route' => $post->exists ? ['admin.posts.update', $post] : ['admin.posts.store'] , 'method' => $post->id ?  'PUT' : 'POST ', 'files' => true]) !!}
-                {!! Form::bsText('title') !!}
-                {!! Form::bsText('link_url') !!}
+                {!! Form::bsText('title', null, ['required']) !!}
+                {!! Form::bsText('link_url', null, ['required']) !!}
 
                 <div class="form-group" style="margin-left: 26%">
                     <label for="">Sans théme </label>

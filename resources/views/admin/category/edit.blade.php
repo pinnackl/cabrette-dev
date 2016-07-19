@@ -11,7 +11,7 @@
         <div class="col-md-6">
             <legend>Modifier les informations</legend>
             {!! Form::model($category, ['route' => ['admin.categories.update', $category], 'method' => $category->id ? 'PUT' : 'POST', 'files' => true]) !!}
-                {!! Form::bsText('title') !!}
+                {!! Form::bsText('title', null, ['required']) !!}
                 {!! Form::bsButton('Enregistrer') !!}
             {!! Form::close() !!}
         </div>

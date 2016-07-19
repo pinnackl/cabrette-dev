@@ -11,7 +11,7 @@
         <div class="col-md-12">
             <legend>Modifier les informations</legend>
             {!! Form::model($announce, ['route' => ['admin.announces.update', $announce], 'method' => $announce->id ? 'PUT' : 'POST', 'files' => true]) !!}
-            {!! Form::bsText('title') !!}
+            {!! Form::bsText('title', null, ['required']) !!}
             {!! Form::bsSelect('categories', $categories) !!}
             {!! Form::bsTextarea('content') !!}
             {!! Form::bsButton('Enregistrer') !!}
