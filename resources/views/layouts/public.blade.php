@@ -7,6 +7,9 @@
 @section('base_content')
 
     @if(Auth::user() && Auth::user()->isAdmin())
+        <div style="position: absolute;right:5px;top:5px">
+            <a class="btn btn-default" style="background-color: white" href="{{ url('admin/users') }}">Retour Administration</a>
+        </div>
     @endif
 
 
@@ -15,7 +18,7 @@
             <ul class="nav navbar-nav">
                 <li><a class="profile" href="{{ url('profile') }}"><i class="fa fa-user"></i> Mon Profil</a></li>
                 <li><a class="" href="{{ route('posts.index') }}"><i class="fa fa-list"></i> Mes articles</a></li>
-                <li><a class="" href="{{ route('annonces.index') }}"><i class="fa fa-thumb-tack"></i> Mes annonces</a></li>
+                <li><a class="" href="{{ route('announces.index') }}"><i class="fa fa-thumb-tack"></i> Mes annonces</a></li>
             </ul>
         </nav>
     @endif
