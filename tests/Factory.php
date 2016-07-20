@@ -2,6 +2,7 @@
 
 namespace Test;
 
+use App\Models\Announce;
 use App\Models\Course;
 use App\Models\Post;
 use App\Models\Theme;
@@ -50,6 +51,12 @@ class Factory
                 $params = array_merge($baseParams, $customParams);
                 $post = new Post($params);
                 return $post;
+
+            case 'annonce':
+                $baseParams = array('title' => 'factory title', 'content' => 'factory content');
+                $params = array_merge($baseParams, $customParams);
+                $annonce = new Announce($params);
+                return $annonce;
         }
 
         throw new Exception('No Factory found for "' . $model . '"');

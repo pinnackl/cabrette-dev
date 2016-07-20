@@ -11,13 +11,13 @@ class PostControllerTest extends TestCase {
         parent::setUp();
         DB::table('posts')->delete();
 
-        $this->admin = Factory::create('admin');
-        $this->be($this->admin);
+        $this->user = Factory::create('user');
+        $this->be($this->user);
     }
 
     public function testIndex()
     {
-        $this->call('GET', 'admin/posts');
+        $this->call('GET', 'posts');
 
         $this->assertResponseOk();
         $this->assertViewHas('posts');
@@ -25,7 +25,7 @@ class PostControllerTest extends TestCase {
 
     public function testCreate()
     {
-        $this->call('GET', 'admin/posts/create');
+        $this->call('GET', 'posts/create');
 
         $this->assertResponseOk();
     }
@@ -38,17 +38,17 @@ class PostControllerTest extends TestCase {
             'content' => 'Content posts'
         ];
 
-        $this->call('POST', 'admin/posts', $inputs);
+        $this->call('POST', 'posts', $inputs);
 
         $this->assertEquals($countPosts + 1, Post::count());
-        $this->assertRedirectedTo('admin/forums');
+        $this->assertRedirectedTo('/');
     }
 
     public function testEdit()
     {
         $post = Factory::create('post');
 
-        $this->call('GET', 'admin/posts/'.$post->id.'/edit');
+        $this->call('GET', 'posts/'.$post->id.'/edit');
 
         $this->assertResponseOk();
     }
@@ -63,7 +63,7 @@ class PostControllerTest extends TestCase {
         ];
 
         $this->shouldRedirectBack();
-        $this->call('PUT', 'admin/posts/'.$post->id, $inputs);
+        $this->call('PUT', 'posts/'.$post->id, $inputs);
 
         $freshPost = Post::find($post->id);
         $this->assertEquals($newTitle, $freshPost->title);
@@ -75,7 +75,7 @@ class PostControllerTest extends TestCase {
         $countPosts = Post::count();
 
         $this->shouldRedirectBack();
-        $this->call('DELETE', 'admin/posts/'.$post->id);
+        $this->call('DELETE', 'posts/'.$post->id);
 
         $this->assertEquals($countPosts - 1, Post::count());
     }

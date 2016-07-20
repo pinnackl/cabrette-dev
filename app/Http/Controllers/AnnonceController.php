@@ -35,7 +35,7 @@ class AnnonceController extends BaseController
         }
         $announce->save();
 
-        return redirect(route('annonces.index'));
+        return redirect(route('announces.index'));
     }
 
     public function edit($id)
@@ -65,6 +65,6 @@ class AnnonceController extends BaseController
         $announce = Announce::findOrFail($id);
         $announce->delete();
 
-        return redirect(route('annonces.index'));
+        return redirect(route('announces.index'));
     }
 }
