@@ -41,19 +41,18 @@
                     </div>
                 </li>
 
+                <li class="nav-item {{ Request::segments()[1] == 'contacts' ? 'active' : ''}}">
+                    <a class="nav-link" href="{{ route('admin.contacts.index') }}"> <i class="fa fa-newspaper-o"></i> Contact </a>
+                </li>
+
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administration</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{{ route('admin.pages.association') }}">L'association</a>
                         <a class="dropdown-item" href="{{ route('admin.pages.cabrette') }}">La cabrette</a>
+                        <a class="dropdown-item" href="{{ route('admin.images.index') }}"><i class="fa fa-file-image-o"></i> Images slider</a>
+                        <a class="dropdown-item" href="{{ route('admin.pages.newsletter') }}">Newsletter</a>
                     </div>
-                </li>
-
-                <li class="nav-item {{ Request::segments()[1] == 'images' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.images.index') }}"> <i class="fa fa-file-image-o"></i> Images slider</a>
-                </li>
-                <li class="nav-item {{ Request::segments()[1] == 'images' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.contacts.index') }}"> <i class="fa fa-newspaper-o"></i> Contact </a>
                 </li>
             </ul>
             <ul class="nav navbar-nav pull-right">

@@ -55,6 +55,13 @@ class PostController extends BaseController
         return view('admin.post.edit', compact('post', 'types', 'themes'));
     }
 
+    public function show($id)
+    {
+        $post = Post::findOrFail($id);
+
+        return view('admin.post.edit', compact('post'));
+    }
+
     public function update($id)
     {
         $post = Post::findOrFail($id);

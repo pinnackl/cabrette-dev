@@ -16,7 +16,7 @@ class ForumController extends BaseController
     {
         $themes = Theme::all();
 
-        $posts = Post::where('title', '!=', 'cabrette')->where('title', '!=', 'association')->orderBy('created_at', 'esc')->get();
+        $posts = Post::where('title', '!=', 'cabrette')->where('title', '!=', 'association')->where('title', '!=', 'newsletter')->where('state', '1')->orderBy('created_at', 'esc')->get();
 
         return view('forum.index', compact('themes', 'posts'));
     }

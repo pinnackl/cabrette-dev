@@ -51,6 +51,9 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('pages.association', ['as' => 'admin.pages.association', 'uses' => 'PageController@association']);
         Route::get('pages.cabrette', ['as' => 'admin.pages.cabrette', 'uses' => 'PageController@cabrette']);
+        Route::get('pages.newsletter', ['as' => 'admin.pages.newsletter', 'uses' => 'PageController@newsletter']);
+
+        Route::post('newsletter.send', ['as' => 'admin.newsletter.send', 'uses' => 'PageController@sendNewsletter']);
     });
 
     Route::group(['middleware' => 'user'], function () {

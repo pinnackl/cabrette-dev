@@ -20,6 +20,16 @@
                     <label for="">Associé à un thème</label>
                     <input type="radio" name="type_theme" class="radio-theme"value="1">
                 </div>
+
+            <div class="form-group row">
+                <label for="" class="col-md-3">Status</label>
+                <div class="col-md-9">
+                    <label for="">Inactif </label>
+                    <input type="radio" name="state" value="0" @if($post->state == 0 or $post->state == 2) checked @endif>
+                    <label for="">Actif</label>
+                    <input type="radio" name="state" value="1" @if($post->state == 1 or !$post->id) checked @endif>
+                </div>
+            </div>
                 <div class="form-group theme-select" style="display: none">
                     <label for="" style="width: 26%;display: inline-block">Thème</label>
                     {!! Form::select('theme', $themes,  null, ['class' => ' form-control', 'style' => 'width:73%;display:inline-block']) !!}
