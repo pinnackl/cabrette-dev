@@ -41,7 +41,7 @@ class PostControllerTest extends TestCase {
         $this->call('POST', 'posts', $inputs);
 
         $this->assertEquals($countPosts + 1, Post::count());
-        $this->assertRedirectedTo('/');
+        $this->assertRedirectedTo('/posts');
     }
 
     public function testEdit()

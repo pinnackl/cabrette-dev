@@ -44,7 +44,7 @@ class PostController extends BaseController
 
         $post->save();
 
-        return redirect()->back()->with('success', 'Article crée');
+        return redirect(route('posts.index'))->with('success', 'Article crée');
     }
 
     public function edit($id)
