@@ -13,7 +13,7 @@
     @endif
 
 
-    @if(Auth::user())
+    @if(Auth::user() && !Auth::user()->isAdmin())
         <nav class="vertical-menu">
             <ul class="nav navbar-nav">
                 <li><a class="profile" href="{{ url('profile') }}"><i class="fa fa-user"></i> Mon Profil</a></li>

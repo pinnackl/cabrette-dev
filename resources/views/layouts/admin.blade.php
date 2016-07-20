@@ -50,7 +50,7 @@
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{{ route('admin.pages.association') }}">L'association</a>
                         <a class="dropdown-item" href="{{ route('admin.pages.cabrette') }}">La cabrette</a>
-                        <a class="dropdown-item" href="{{ route('admin.images.index') }}"><i class="fa fa-file-image-o"></i> Images slider</a>
+                        <a class="dropdown-item" href="{{ route('admin.images.index') }}">Images slider</a>
                         <a class="dropdown-item" href="{{ route('admin.pages.newsletter') }}">Newsletter</a>
                     </div>
                 </li>

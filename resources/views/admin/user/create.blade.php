@@ -16,7 +16,7 @@
                 {!! Form::bsText('last_name') !!}
                 {!! Form::bsPhone('phone') !!}
                 {!! Form::bsPassword('password', '') !!}
-                {!! Form::bsSelect('role', ['admin' => 'Admin', 'partner' => 'Partenaire', 'user' => 'Utilisateur'], 'user', ['required']) !!}
+                {!! Form::bsSelect('role', ['admin' => 'Admin', 'user' => 'Utilisateur'], 'user', ['required']) !!}
                 {!! Form::bsButton('Enregistrer') !!}
             {!! Form::close() !!}
 
