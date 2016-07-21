@@ -4,7 +4,7 @@
 
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.themes.index') }}">Forum </a></li>
-        <li class="active">{{ $theme->exists ? 'Modifier l annonce' : 'Nouvelle annonce' }}</li>
+        <li class="active">{{ $theme->exists ? 'Modifier le thème' : 'Nouveau Thème' }}</li>
     </ol>
 
     <div class="row">

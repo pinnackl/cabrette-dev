@@ -6,6 +6,8 @@ use App\Helpers\UploadFileHelper;
 use App\Http\Controllers\BaseController;
 use App\Models\Post;
 use App\Models\Theme;
+use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 use Input, Auth;
 
 class PostController extends BaseController
@@ -43,6 +45,14 @@ class PostController extends BaseController
         }
 
         $post->save();
+
+        $admins = User::where('role', 'admin')->get();
+
+        foreach ($admins as $user ) {
+            Mail::send('emails.postsubmit', ['user' => $user], function ($m) use ($user) {
+                $m->to($user->email)->subject('Un post à été écrit par un utilisateur');
+            });
+        }
 
         return redirect(route('posts.index'))->with('success', 'Article crée');
     }

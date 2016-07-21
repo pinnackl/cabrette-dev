@@ -22,7 +22,7 @@
                     <tr>
                         <td>{{ $key +1 }}</td>
                         <td>{{ $post->title }}</td>
-                        <td>{{ $post->theme->title }}</td>
+                        <td>@if($post->theme){{ $post->theme->title }}@endif</td>
                         <td class="action-cell pull-right">
                             <a href="{{ 'posts/'.$post->id.'/edit' }}" class="btn btn-sm btn-link" title="Éditer">
                                 <i class="fa fa-pencil"></i>
