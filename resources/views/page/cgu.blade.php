@@ -5,9 +5,9 @@
     @include('partials.navbar')
 
     <div class="container">
+        <h2 class="title-media">Conditions générales d'utilisation</h2>
         <section class="content-section">
             <div class="row" style="padding: 10px">
-                <h2 class="title-media">Conditions générales d'utilisation</h2>
 
                 <p>
                 Les services et contenus éditoriaux de modele-lettre-type.com sont offerts gratuitement, dans leur intégralité, par toute l'équipe de modele-lettre-type.com. Ce site est édité par la société Tropical Soiree Co Ltd (Incorporated in Mauritius on the 3rd March 2008) - Company No. 078415 C2/GBL. Registered Office : 12th Floor, Raffles Tower, 19 Cybercity EBENE - Mauritius.

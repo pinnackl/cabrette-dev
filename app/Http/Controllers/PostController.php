@@ -32,6 +32,12 @@ class PostController extends BaseController
         $post = new Post(Input::all());
         $post->author = Auth::id();
 
+        $exitstLinkUlr = Post::where('link_url',Input::get('link_url') )->get();
+
+        if(count($exitstLinkUlr) > 0) {
+            return redirect()->back()->withErrors('Lien déja utilisé');
+        }
+
         if(Input::get('type_theme') == 1 && Input::get('theme')) {
             $post->theme_id = Input::get('theme');
         }
@@ -70,6 +76,12 @@ class PostController extends BaseController
         $post = Post::findOrFail($id);
 
         $post->fill(Input::all());
+
+        $exitstLinkUlr = Post::where('link_url',Input::get('link_url') )->get();
+
+        if(count($exitstLinkUlr) > 0) {
+            return redirect()->back()->withErrors('Lien déja utilisé');
+        }
 
         if(Input::get('type_theme') == 1 && Input::get('theme')) {
             $post->theme_id = Input::get('theme');

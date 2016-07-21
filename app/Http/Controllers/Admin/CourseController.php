@@ -27,6 +27,12 @@ class CourseController extends BaseController
     public function store()
     {
         $course = new Course(Input::all());
+        $exitstLinkUlr = Course::where('link_url',Input::get('link_url') )->get();
+
+        if(count($exitstLinkUlr) > 0) {
+            return redirect()->back()->withErrors('Lien déja utilisé');
+        }
+
         $course->save();
 
         return redirect(route('admin.courses.index'));
@@ -43,8 +49,14 @@ class CourseController extends BaseController
     {
         $course = Course::findOrFail($id);
 
-        $course->fill(Input::all());
+        $exitstLinkUlr = Course::where('link_url',Input::get('link_url') )->get();
 
+        if(count($exitstLinkUlr) > 0) {
+            return redirect()->back()->withErrors('Lien déja utilisé');
+        }
+
+
+        $course->fill(Input::all());
         $course->save();
 
         return back()->with('info', 'Modifications bien enregistrées.');
