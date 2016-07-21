@@ -12,5 +12,5 @@
         </a>
     </p>
 
-    @include('partials.table', ['items' => $themes, 'resource' => 'themes', 'columns' => ['title'], 'actions' => ['edit']])
+    @include('partials.table', ['items' => $themes, 'resource' => 'themes', 'columns' => ['title'], 'actions' => ['edit', 'destroy']])
 @stop

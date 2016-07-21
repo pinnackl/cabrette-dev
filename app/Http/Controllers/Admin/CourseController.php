@@ -55,6 +55,6 @@ class CourseController extends BaseController
         $course = Course::findOrFail($id);
         $course->delete();
 
-        return redirect(route('admin.announces.index'));
+        return redirect(route('admin.courses.index'));
     }
 }

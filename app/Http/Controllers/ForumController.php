@@ -8,6 +8,7 @@ use App\Models\Announce;
 use App\Models\Media;
 use App\Models\Post;
 use App\Models\Theme;
+use Carbon\Carbon;
 use Input, Auth;
 
 class ForumController extends BaseController
@@ -23,6 +24,8 @@ class ForumController extends BaseController
 
     public function show($link_url)
     {
+        Carbon::setLocale('fr');
+
         $post = Post::where('link_url', $link_url)->first();
 
         return view('forum.subject.show', compact('post'));

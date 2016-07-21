@@ -3,7 +3,7 @@
 @section('content')
 
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.posts.index') }}">Forum</a></li>
+        <li><a href="{{ route('admin.forums.index') }}">Forum</a></li>
         <li class="active">{{ $post->exists ? 'Modifier le sujet' : 'Nouveau sujet' }}</li>
     </ol>
 
