@@ -21,7 +21,7 @@
                     <div class="collapse" id="collapseExample">
                         <div class="well">
                             {{ $announce->user->full_name }}
-                            <a href="">{{ $announce->user->email }}</a> <br>
+                            <a href="mailto:{{ $announce->user->email }}" target="_blank">{{ $announce->user->email }}</a> <br>
                             {{ $announce->user->phone }}
                         </div>
                     </div>
