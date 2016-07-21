@@ -21,7 +21,7 @@ function initCalendar(filters) {
         eventLimit: 20,
         editable: true,
         height: vhInPx*70,
-        eventColor: '#75D13B',
+        eventColor: '#ffcc33',
         defaultView: 'month',
         eventSources: [{
             events: function loadFreeTimeSlots(start, end, timezone, callback) {

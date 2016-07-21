@@ -82,7 +82,7 @@ header a:hover {
   position: absolute;
   bottom: 5px;
   right: 10px;
-  color: #75D13B;
+  color: #ffcc33;
   cursor: pointer;
 }
 
@@ -114,7 +114,7 @@ header a:hover {
 }
 
 .vertical-menu ul li a {
-  color: #75D13B;
+  color: #ffcc33;
   cursor: pointer;
 }
 
@@ -368,7 +368,7 @@ header a:hover {
 }
 
 .blog-card .details a:hover {
-  color: #75D13B;
+  color: #ffcc33;
 }
 
 .blog-card .description {
@@ -399,7 +399,7 @@ header a:hover {
 
 .blog-card .description .summary:after {
   content: "";
-  background: #75D13B;
+  background: #ffcc33;
   height: 6px;
   width: 40px;
   /*POSITION*/
@@ -409,7 +409,7 @@ header a:hover {
 }
 
 .blog-card .description a {
-  color: #75D13B;
+  color: #ffcc33;
   margin-bottom: 10px;
   float: right;
 }
@@ -514,7 +514,7 @@ header a:hover {
 
 .summary:after {
   content: "";
-  background: #75D13B;
+  background: #ffcc33;
   height: 6px;
   width: 40px;
   /*POSITION*/
@@ -544,7 +544,7 @@ header a:hover {
 
 .blog-media .summary:after {
   content: "";
-  background: #75D13B;
+  background: #ffcc33;
   height: 6px;
   width: 40px;
   /*POSITION*/
@@ -577,7 +577,7 @@ header a:hover {
   position: absolute;
   bottom: 5px;
   right: 10px;
-  color: #75D13B;
+  color: #ffcc33;
   cursor: pointer;
 }
 
@@ -604,7 +604,7 @@ header a:hover {
   position: absolute;
   bottom: 5px;
   right: 10px;
-  color: #75D13B;
+  color: #ffcc33;
   cursor: pointer;
 }
 
@@ -627,7 +627,7 @@ header a:hover {
   position: absolute;
   bottom: 5px;
   right: 10px;
-  color: #75D13B;
+  color: #ffcc33;
   cursor: pointer;
 }
 

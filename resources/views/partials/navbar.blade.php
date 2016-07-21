@@ -1,5 +1,5 @@
 <header>
-    <h1><a href="{{ route('/') }}">Cabrettes <img src="{{ asset('img/cabrette-logo.png') }}" alt="" width="100px"> Cabrettaires</a></h1>
+    <h1><a href="{{ route('/') }}">Cabrettes <img src="{{ asset('img/cabrette-logo.png') }}" alt="" width="100px"> Cabrettaïres</a></h1>
 
 </header>
 <?php if(Request::segments()) { $segment = Request::segments()[0]; }else {$segment='';} ?>

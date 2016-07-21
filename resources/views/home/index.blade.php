@@ -48,8 +48,8 @@
           <h2>Annonces</h2>
           <ul>
             @foreach($announces as $announce)
-              <li>
-                <a href="{{ route('annonces.show', [$announce]) }}">{{ $announce->title }}</a>
+              <li style="width: 100%;background-color: #f7f7f9;margin-bottom: 3px">
+                <a href="{{ route('annonces.show', [$announce]) }}" style="display: block;">{{ $announce->title }}</a>
               </li>
             @endforeach
           </ul>
@@ -59,8 +59,8 @@
           <h2>Cours</h2>
           <ul>
             @foreach($courses as $course)
-              <li>
-                <a href="{{ url('cours/'.$course->link_url) }}">{{ $course->title }}</a>
+              <li style="width: 100%;background-color: #f7f7f9;margin-bottom: 3px">
+                <a href="{{ url('cours/'.$course->link_url) }}" style="display: block;">{{ $course->title }}</a>
               </li>
             @endforeach
           </ul>
@@ -72,8 +72,8 @@
           <h2>Forum</h2>
           <ul>
             @foreach($subjects as $subject)
-              <li>
-                <a href="{{ url('forum/'.$subject->link_url) }}">{{ $subject->title }}</a>
+              <li style="width: 100%;background-color: #f7f7f9;margin-bottom: 3px">
+                <a href="{{ url('forum/'.$subject->link_url) }}" style="display: block;">{{ $subject->title }}</a>
               </li>
             @endforeach
           </ul>

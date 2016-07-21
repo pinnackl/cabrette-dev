@@ -20,7 +20,7 @@ class HomeController extends BaseController
 
         $subjects = Post::where('title', '!=', 'association')->where('title', '!=', 'cabrette')->where('title', '!=', 'newsletter')->where('state', '1')->orderBy('created_at', 'desc')->take(5)->get();
 
-        $event = Event::where('date_start', '>=', Carbon::now())->first();
+        $event = Event::where('date_start', '>=', Carbon::now())->where('date_start', '<=', Carbon::now()->addDay(4))->first();
 
 
         return view('home.index', compact('courses', 'announces', 'subjects', 'event', 'images'));
