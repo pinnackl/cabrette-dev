@@ -15,7 +15,7 @@
                 </li>
 
                 <li class="nav-item {{ Request::segments()[1] == 'events' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{ route('admin.events.index') }}"> <i class="fa fa-calendar"></i> Events</a>
+                    <a class="nav-link" href="{{ route('admin.events.index') }}"> <i class="fa fa-calendar"></i> Evènements</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-list"></i> Annonces</a>
