@@ -33,7 +33,8 @@
                     <li><a href="{{ route('cgu') }}">CGU</a></li> -
                     <li><a href="{{ route('contact') }}">Contact</a></li> -
                     <li><a href="{{ route('newsletter') }}">Newsletter</a></li> -
-                    <li><a href="{{ route('partenaires') }}">Partenaires</a></li>
+                    <li><a href="{{ route('partenaires') }}">Partenaires</a></li> -
+                    <li><a href="http://cabrette.cabrettaire.free.fr/Contact/Organigramme_C&C_2016.pdf" target="_blank">Organigramme</a></li>
                 </ul>
             </div>
         </footer>
