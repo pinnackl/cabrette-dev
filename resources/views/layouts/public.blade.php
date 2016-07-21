@@ -32,7 +32,8 @@
                 <ul>
                     <li><a href="{{ route('cgu') }}">CGU</a></li> -
                     <li><a href="{{ route('contact') }}">Contact</a></li> -
-                    <li><a href="{{ route('newsletter') }}">Newsletter</a></li>
+                    <li><a href="{{ route('newsletter') }}">Newsletter</a></li> -
+                    <li><a href="{{ route('partenaires') }}">Partenaires</a></li>
                 </ul>
             </div>
         </footer>

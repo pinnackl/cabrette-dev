@@ -47,6 +47,11 @@ class PageController extends BaseController
         return view('page.newletter');
     }
 
+    public function partenaires()
+    {
+        return view('page.partenaires');
+    }
+
     public function postNewsletter()
     {
         $newletter = New Newsletter(Input::all());

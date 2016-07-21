@@ -84,6 +84,9 @@ Route::get('newsletter', ['as' => 'newsletter', 'uses' => 'PageController@newsle
 Route::post('newsletter', ['as' => 'newsletter', 'uses' => 'PageController@postNewsletter']);
 
 Route::get('cgu', ['as' => 'cgu', 'uses' => 'PageController@cgu']);
+Route::get('partenaires', ['as' => 'partenaires', 'uses' => 'PageController@partenaires']);
+
+
 
 Route::get('agenda', ['as' => 'agenda.index', 'uses' => 'AgendaController@index']);
 Route::get('events-all', ['as' => 'event-all', 'uses' => 'Admin\EventController@all']);
