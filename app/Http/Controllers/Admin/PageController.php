@@ -52,4 +52,5 @@ class PageController extends BaseController
     {
         return view('admin.page.contact');
     }
+
 }

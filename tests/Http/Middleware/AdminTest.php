@@ -1,6 +1,5 @@
 <?php
 
-
 use Test\Factory;
 use Test\TestCase;
 

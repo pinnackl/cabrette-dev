@@ -49,13 +49,6 @@ class CourseController extends BaseController
     {
         $course = Course::findOrFail($id);
 
-        $exitstLinkUlr = Course::where('link_url',Input::get('link_url') )->get();
-
-        if(count($exitstLinkUlr) > 0) {
-            return redirect()->back()->withErrors('Lien déja utilisé');
-        }
-
-
         $course->fill(Input::all());
         $course->save();
 

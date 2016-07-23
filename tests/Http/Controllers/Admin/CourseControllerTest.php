@@ -11,7 +11,6 @@ class CourseControllerTest extends TestCase {
         parent::setUp();
         DB::table('courses')->delete();
 
-
         $this->admin = Factory::create('admin');
         $this->be($this->admin);
     }
@@ -46,6 +45,26 @@ class CourseControllerTest extends TestCase {
         $this->assertEquals($countCourses + 1, Course::count());
         $this->assertRedirectedTo('admin/courses');
     }
+
+    public function testStoreAvecUrlQuiExisteDeja()
+    {
+        Factory::create('course', ['link_url' => 'url']);
+
+        $theme = Factory::create('theme');
+        $countCourses = Course::count();
+        $inputs = [
+            'title' => 'Prénom',
+            'content' => 'Nom',
+            'theme' => $theme->id,
+            'link_url' => 'url',
+        ];
+
+        $this->shouldRedirectBack();
+        $this->call('POST', 'admin/courses', $inputs);
+
+        $this->assertEquals($countCourses, Course::count());
+    }
+
 
     public function testEdit()
     {

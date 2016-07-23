@@ -33,11 +33,6 @@ class User extends BaseModel implements AuthenticatableContract, CanResetPasswor
         return $this->role === 'admin';
     }
 
-    public function isPartner()
-    {
-        return $this->role === 'partner';
-    }
-
     public function isUser()
     {
         return $this->role === 'user';
@@ -51,13 +46,6 @@ class User extends BaseModel implements AuthenticatableContract, CanResetPasswor
     public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = Hash::make($value);
-    }
-
-    public function getAutocompleteArrayAttribute()
-    {
-        $label = $this->full_name . ' - ' . $this->email;
-
-        return ['id' => $this->id, 'value' => $label, 'label' => $label];
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-
+namespace tests\Http\Middleware;
 use Test\Factory;
 use Test\TestCase;
 

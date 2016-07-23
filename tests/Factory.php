@@ -47,7 +47,7 @@ class Factory
                 return $theme;
 
             case 'post':
-                $baseParams = array('title' => 'factory title', 'content' => 'factory content');
+                $baseParams = array('title' => 'factory title', 'content' => 'factory content', 'state' => 1, 'link_url' => 'factorylink');
                 $params = array_merge($baseParams, $customParams);
                 $post = new Post($params);
                 return $post;
@@ -57,6 +57,12 @@ class Factory
                 $params = array_merge($baseParams, $customParams);
                 $annonce = new Announce($params);
                 return $annonce;
+
+            case 'comment':
+                $baseParams = array('content' => 'factory content');
+                $params = array_merge($baseParams, $customParams);
+                $comment = new Announce($params);
+                return $comment;
         }
 
         throw new Exception('No Factory found for "' . $model . '"');
